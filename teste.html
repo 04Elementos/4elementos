@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="styles/quiz.css">
+        <title>Quiz - Elementos</title>
+
+        <script type="application/javascript" src="questions.js"></script>
+    </head>
+
+    <body>    
+        <div class="quiz-container">
+            <div class="title">
+                <h2>Afinidade com os Elementos</h2>
+            </div>
+            <div class="recomendation">
+                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste.</p>
+            </div>
+
+            <div id="question" class="question"></div>
+            
+            <div class="options">
+                <label class="option">
+                    <input type="button" name="option" id="1" value="Concordo completamente" onclick="next(2)"/>
+                </label><br>
+                
+                <label class="option">
+                    <input type="button" name="option" id="2" value="Concordo" onclick="next(1)"/>
+                </label><br>
+                
+                <label class="option">
+                    <input type="button" name="option" id="3" value="Neutro" onclick="next(0)"/>
+                </label><br>
+    
+                <label class="option">
+                    <input type="button" name="option" id="4" value="Discordo" onclick="next(-1)"/>
+                </label><br>
+    
+                <label class="option">
+                    <input type="button" name="option" id="5" value="Discordo completamente" onclick="next(-2)"/>
+                </label><br>
+            </div>
+
+            <div class="controls">
+                <button class="previous">Voltar</button>
+            </div>
+        </div>
+            <div class="result">
+        </div>
+
+        <script>
+            let answers = new Object;
+            let qn = 0;
+
+            var questionsObject = new Object();
+                questions.forEach(populateQO);
+
+            function populateQO(value) {
+                questionsObject[value['id']] = value
+            }
+
+            var questionsOrder = Object.keys(questionsObject);
+                shuffleArray(questionsOrder);
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                }
+
+            init_question();
+
+            function init_question() {
+                document.getElementById("question").innerHTML = questionsObject[questionsOrder[qn]].question;
+            }
+
+            function next(answer) {
+                if (qn === questionsOrder.length) {
+                    return;
+                }
+
+                answers[questionsOrder[qn]] = answer;
+                qn++;
+
+                console.log(answer)
+
+                if (qn < questionsOrder.length) {
+                    init_question();
+                } else {
+                    results()
+                }
+            }
+
+            function results() {
+                console.log(answers)
+            }
+
+        </script>
+    </body>
+</html>
