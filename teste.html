@@ -4,11 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles/quiz.css">
         <title>Quiz - Elementos</title>
 
         <script type="application/javascript" src="questions.js"></script>
+        <script type="application/javascript" src="elements.js"></script>
     </head>
 
     <body>    
@@ -20,27 +23,30 @@
                 <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste.</p>
             </div>
 
-            <div id="question" class="question"></div>
-            
+            <div>
+                <p id="order" class="order"></p>
+                <div id="question" class="question"></div>
+            </div>
+
             <div class="options">
                 <label class="option">
-                    <input type="button" name="option" id="1" value="Concordo completamente" onclick="next(2)"/>
+                    <input type="button" name="option" id="b1" value="Concordo completamente" onclick="next(2)"/>
                 </label><br>
                 
                 <label class="option">
-                    <input type="button" name="option" id="2" value="Concordo" onclick="next(1)"/>
+                    <input type="button" name="option" id="b2" value="Concordo" onclick="next(1)"/>
                 </label><br>
                 
                 <label class="option">
-                    <input type="button" name="option" id="3" value="Neutro" onclick="next(0)"/>
+                    <input type="button" name="option" id="b3" value="Neutro" onclick="next(0)"/>
                 </label><br>
     
                 <label class="option">
-                    <input type="button" name="option" id="4" value="Discordo" onclick="next(-1)"/>
+                    <input type="button" name="option" id="b4" value="Discordo" onclick="next(-1)"/>
                 </label><br>
     
                 <label class="option">
-                    <input type="button" name="option" id="5" value="Discordo completamente" onclick="next(-2)"/>
+                    <input type="button" name="option" id="b5" value="Discordo completamente" onclick="next(-2)"/>
                 </label><br>
             </div>
 
@@ -53,16 +59,23 @@
 
         <script>
             let answers = new Object;
+            let actualQ = 1;
             let qn = 0;
+            let result = {
+                emocao: 1,
+                solidao: 1,
+                ordem: 1,
+                caos: 1,
+            }
 
-            var questionsObject = new Object();
+            let questionsObject = new Object();
                 questions.forEach(populateQO);
 
             function populateQO(value) {
                 questionsObject[value['id']] = value
             }
 
-            var questionsOrder = Object.keys(questionsObject);
+            let questionsOrder = Object.keys(questionsObject);
                 shuffleArray(questionsOrder);
                 function shuffleArray(array) {
                     for (let i = array.length - 1; i > 0; i--) {
@@ -74,7 +87,7 @@
             init_question();
 
             function init_question() {
-                document.getElementById("question").innerHTML = questionsObject[questionsOrder[qn]].question;
+                document.getElementById("question").innerHTML = `#${qn+1} | ${questionsObject[questionsOrder[qn]].question}`;
             }
 
             function next(answer) {
@@ -83,9 +96,14 @@
                 }
 
                 answers[questionsOrder[qn]] = answer;
-                qn++;
+                result = {
+                    emocao: result.emocao += questionsObject[questionsOrder[qn]].effect.emocao * answer,
+                    solidao: result.solidao += questionsObject[questionsOrder[qn]].effect.solidao * answer,
+                    ordem: result.ordem += questionsObject[questionsOrder[qn]].effect.ordem * answer,
+                    caos: result.caos += questionsObject[questionsOrder[qn]].effect.caos * answer,
+                }
 
-                console.log(answer)
+                qn++;
 
                 if (qn < questionsOrder.length) {
                     init_question();
@@ -95,7 +113,18 @@
             }
 
             function results() {
-                console.log(answers)
+                const porcentRes =  [
+                    {id: 'emocao', valor: 45 + Math.floor((100 * result.emocao) / 20)},
+                    {id: 'solidao', valor: 45 + Math.floor((100 * result.solidao) / 20)},
+                    {id: 'ordem', valor: 45 + Math.floor((100 * result.ordem) / 20)},
+                    {id: 'caos', valor: 45 + Math.floor((100 * result.caos) / 20)}
+                ] 
+
+                const sortRes = porcentRes.sort( function (a, b) {
+                    return a.valor < b.valor
+                })
+
+                console.log(sortRes)
             }
 
         </script>
