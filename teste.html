@@ -114,17 +114,11 @@
 
             function results() {
                 const porcentRes =  [
-                    {id: 'emocao', valor: 45 + Math.floor((100 * result.emocao) / 20)},
-                    {id: 'solidao', valor: 45 + Math.floor((100 * result.solidao) / 20)},
-                    {id: 'ordem', valor: 45 + Math.floor((100 * result.ordem) / 20)},
-                    {id: 'caos', valor: 45 + Math.floor((100 * result.caos) / 20)}
+                    45 + Math.floor((100 * result.emocao) / 20),
+                    45 + Math.floor((100 * result.solidao) / 20),
+                    45 + Math.floor((100 * result.ordem) / 20),
+                    45 + Math.floor((100 * result.caos) / 20)
                 ] 
-
-                const sortRes = porcentRes.sort( function (a, b) {
-                    return a.valor < b.valor
-                })
-
-                console.log(sortRes)
             }
 
         </script>
