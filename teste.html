@@ -56,6 +56,14 @@
             </div>
         </div>
 
+        <div class="endTest">
+            <h2>4Elementos - Fim do teste</h2>
+            <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
+        
+            <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
+            <input type="submit" name="postButton" class="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
+        </div>
+
         <script>
             let answers = new Object;
             let actualQ = 1;
@@ -107,11 +115,19 @@
                 if (qn < questionsOrder.length) {
                     init_question();
                 } else {
-                    results()
+                    lastScreen()
                 }
             }
 
-            function results() {
+            function lastScreen() {
+                const container = document.querySelector('.quiz-container');
+                const lastScreen = document.querySelector('.endTest');
+
+                container.style.display = 'none';
+                lastScreen.style.display = 'block';
+            }
+
+            function sendResults() {
                 function percentage(partialValue, totalValue) {
                     totalValue = 55;
                     return (100 * partialValue) / totalValue;
@@ -154,7 +170,23 @@
                     })
                 }
 
-                document.getElementById("question").innerHTML = `Seu elemento é: ${validateElement(userEspectro)}`;
+                let validateUser;
+
+                if(validateElement(userEspectro).length === 4){
+                    // Easter egg, se todos os elementos empatarem, o resultado é Medo.
+                    validateUser = "Medo"
+                } else if(validateElement(userEspectro).length === 2){
+                    validateUser = `${validateElement(userEspectro)[0]} e ${validateElement(userEspectro)[1]}`
+                } else {
+                    validateUser = validateElement(userEspectro)
+                }
+
+                name = document.getElementById("uname").value;
+                localStorage.setItem("name", name);
+                localStorage.setItem("results", validateUser);
+
+                console.log(localStorage.getItem("name"))
+                console.log(localStorage.getItem("results"))
             }
 
         </script>
