@@ -7,8 +7,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
         <link rel="stylesheet" href="styles/quiz.css">
-        <title>Quiz - Elementos</title>
+        <title>4Elementos</title>
 
         <script type="application/javascript" src="questions.js"></script>
         <script type="application/javascript" src="elements.js"></script>
@@ -17,10 +18,10 @@
     <body>    
         <div class="quiz-container">
             <div class="title">
-                <h2>Afinidade com os Elementos</h2>
+                <h2>4Elementos - Teste de Afinidade</h2>
             </div>
             <div class="recomendation">
-                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste.</p>
+                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste. Utilize o botão voltar para mudar uma resposta, se precisar.</p>
             </div>
 
             <div>
@@ -113,12 +114,49 @@
             }
 
             function results() {
+                function percentage(partialValue, totalValue) {
+                    totalValue = 55;
+                    return (100 * partialValue) / totalValue;
+                } 
+
                 const porcentRes =  [
-                    45 + Math.floor((100 * result.emocao) / 20),
-                    45 + Math.floor((100 * result.solidao) / 20),
-                    45 + Math.floor((100 * result.ordem) / 20),
-                    45 + Math.floor((100 * result.caos) / 20)
+                    10 + Math.floor(percentage(result.emocao)),
+                    10 + Math.floor(percentage(result.solidao)),
+                    10 + Math.floor(percentage(result.ordem)),
+                    10 + Math.floor(percentage(result.caos)),
                 ] 
+
+                emocArray = ["Sangue", "Energia", "Morte", "Conhecimento"]
+                soliArray = ["Morte", "Conhecimento", "Energia", "Sangue"]
+                ordeArray = ["Conhecimento", "Morte", "Sangue", "Energia"]
+                caosArray = ["Energia", "Sangue", "Conhecimento", "Morte"]
+
+                function checkElements(val, arr) {
+                    if (val > 20) { return arr[0]} else
+                    if (val > 10) { return arr[1]} else
+                    if (val > 5) { return arr[2]} 
+                    else { return arr[3] }
+                }
+
+                const userEspectro = [
+                    checkElements(porcentRes[0], emocArray),
+                    checkElements(porcentRes[1], soliArray),
+                    checkElements(porcentRes[2], ordeArray),
+                    checkElements(porcentRes[3], caosArray),
+                ]
+
+                function validateElement(arr) {
+                    const hashmap = arr.reduce( (acc, val) => {
+                        acc[val] = (acc[val] || 0 ) + 1
+                        return acc
+                    },{})
+                    return Object.keys(hashmap).filter(x => {
+                        return hashmap[x] == Math.max.apply(null, 
+                        Object.values(hashmap))
+                    })
+                }
+
+                document.getElementById("question").innerHTML = `Seu elemento é: ${validateElement(userEspectro)}`;
             }
 
         </script>
