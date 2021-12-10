@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     font-family: 'Space Mono', monospace;
@@ -63,3 +67,33 @@ img {
     background-color: white;
     color: black;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: auto;
+        margin-top: none;
+        padding: 10px;
+        border: 2px solid goldenrod;
+        text-align: center;
+        color: white;
+    }
+    
+    h3 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: justify;  
+        text-justify: inter-word;
+        margin: 2px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        filter: drop-shadow(8px 8px 10px gray);
+    }
+  }

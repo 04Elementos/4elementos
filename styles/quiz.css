@@ -53,3 +53,23 @@ p {
 .previous {
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 768px) {
+    .quiz-container {
+        width: 80%;
+        margin: auto;
+        padding: 15px;
+        text-align: center;
+        color: white;
+    }
+    
+    .question {
+        border: 2px solid white;
+        margin: 25px;
+        padding: 7px;
+    }
+
+    .previous {
+        margin-top: 20px;
+    }
+  }
