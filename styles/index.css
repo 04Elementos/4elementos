@@ -92,8 +92,8 @@ img {
     }
 
     img {
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 75px;
         filter: drop-shadow(8px 8px 10px gray);
     }
   }

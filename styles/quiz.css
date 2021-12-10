@@ -15,10 +15,9 @@ p {
 }
 
 .quiz-container {
-    width: 65%;
+    width: 70%;
     margin: auto;
-    margin-top: 5%;
-    padding: 20px;
+    padding: 15px;
     border: 2px solid goldenrod;
     text-align: center;
     color: white;
@@ -56,17 +55,11 @@ p {
 
 @media only screen and (max-width: 768px) {
     .quiz-container {
-        width: 80%;
+        width: 90%;
         margin: auto;
         padding: 15px;
         text-align: center;
         color: white;
-    }
-    
-    .question {
-        border: 2px solid white;
-        margin: 25px;
-        padding: 7px;
     }
 
     .previous {
