@@ -128,16 +128,17 @@
             }
 
             function sendResults() {
+                localStorage.clear();
+
                 function percentage(partialValue, totalValue) {
-                    totalValue = 55;
                     return (100 * partialValue) / totalValue;
                 } 
 
                 const porcentRes =  [
-                    10 + Math.floor(percentage(result.emocao)),
-                    10 + Math.floor(percentage(result.solidao)),
-                    10 + Math.floor(percentage(result.ordem)),
-                    10 + Math.floor(percentage(result.caos)),
+                    10 + Math.floor(percentage(result.emocao, 55)),
+                    10 + Math.floor(percentage(result.solidao, 55)),
+                    10 + Math.floor(percentage(result.ordem, 55)),
+                    10 + Math.floor(percentage(result.caos, 55)),
                 ] 
 
                 emocArray = ["Sangue", "Energia", "Morte", "Conhecimento"]
@@ -176,17 +177,25 @@
                     // Easter egg, se todos os elementos empatarem, o resultado é Medo.
                     validateUser = "Medo"
                 } else if(validateElement(userEspectro).length === 2){
-                    validateUser = `${validateElement(userEspectro)[0]} e ${validateElement(userEspectro)[1]}`
+                    validateUser = validateElement(userEspectro)[0]
                 } else {
                     validateUser = validateElement(userEspectro)
                 }
 
+                const maxValue = porcentRes[0] + porcentRes[1] + porcentRes[2] + porcentRes[3];
+                const userEspectroPer = [
+                    Math.floor(percentage(porcentRes[0], maxValue)),
+                    Math.floor(percentage(porcentRes[1], maxValue)),
+                    Math.floor(percentage(porcentRes[2], maxValue)),
+                    Math.floor(percentage(porcentRes[3], maxValue))
+                ]
+
                 name = document.getElementById("uname").value;
                 localStorage.setItem("name", name);
                 localStorage.setItem("results", validateUser);
+                localStorage.setItem("espectro", userEspectroPer)
 
-                console.log(localStorage.getItem("name"))
-                console.log(localStorage.getItem("results"))
+                location.href = 'results.html';
             }
 
         </script>

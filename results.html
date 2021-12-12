@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="result"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
+        <link rel="stylesheet" href="styles/results.css">
+        <title>4Elementos</title>
+        <script type="application/javascript" src="elements.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="errorDiv">
+                <h2>Ops... Algo deu errado!</h2>
+                <p>
+                    Parece que de alguma forma você chegou na página de resultados sem responder o teste, logo, não existem resultados. Se você respondeu o teste e está vendo essa mensagem
+                    significa que o seu navegador provavelmente não tem suporte a algumas tecnologias necessárias para o funcionamento do site. Recomendamos você atualizar seu navegador e tentar novamente!
+                </p>
 
-    <script>
-        setTimeout(function() {
-                let results = localStorage.getItem("results")
-                console.log(results)
-            }, 6000);
-    </script>
-</body>
+                <button class="b-error" onclick="window.location.href='index.html'">
+                    Página Inicial
+                </button>
+            </div>
+            
+            <div class="resultsDiv">
+                <h2>Boas vindas!</h2>
+                <h3 id="agentName" class="whiteH3"></h3>
+                
+                <h3>Você possui afinidade com...</h3>
+                <h3 id="elementResultName" class="whiteH3"></h3>
+
+                <img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste">
+                <p class="centerP" id="fraseGuia"></p>
+
+                <h3>Descrição</h3>
+                <p id="descElement"></p>
+
+                <h3>Seu Espectro</h3>
+                <div class="userEspectro">
+                    <div class="userRow">
+                        <h4>Emoção</h4>
+                        <p id="emocValue" class="espectroValue"></p>
+                    </div>
+
+                    <div class="userRow">
+                        <h4>Solidão</h4>
+                        <p id="soliValue" class="espectroValue"></p>
+                    </div>
+
+                    <div class="userRow">
+                        <h4>Ordem</h4>
+                        <p id="ordeValue" class="espectroValue"></p>
+                    </div>
+
+                    <div class="userRow">
+                        <h4>Caos</h4>
+                        <p id="caosValue" class="espectroValue"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            setTimeout(function() {
+                if (typeof localStorage !== 'undefined') {
+                    const name = localStorage.getItem("name")
+                    const result = localStorage.getItem("results")
+                    const espectro = localStorage.getItem("espectro")
+
+                    if(!result && !espectro) {
+                        showErrors() 
+                    } else{
+                        showResults()
+                    }
+                } else {
+                    showErrors() 
+                }
+                }, 50);
+
+            function showErrors() {
+                const errorsScreen = document.querySelector('.errorDiv');
+                const resultScreen = document.querySelector('.resultsDiv');
+                errorsScreen.style.display = 'block'
+                resultScreen.style.display = 'none'
+            }
+            
+            function showResults() {
+                if(name) {
+                    document.getElementById("agentName").innerHTML = `Agente ${name}`
+                } else {
+                    document.getElementById("agentName").innerHTML = 'Agente Desconhecido'
+                }
+
+                const img = document.getElementById("elementResult")
+                img.src = `images/elementos/${localStorage.getItem("results")}.webp`
+
+                let userGuia;
+                if(localStorage.getItem("results") === "Morte") {userGuia = elements.Morte.fraseGuia} else 
+                if(localStorage.getItem("results") === "Sangue") {userGuia = elements.Sangue.fraseGuia} else 
+                if(localStorage.getItem("results") === "Energia") {userGuia = elements.Energia.fraseGuia} 
+                else {userGuia = elements.Conhecimento.fraseGuia} 
+
+                let userDesc;
+                if(localStorage.getItem("results") === "Morte") {userDesc = elements.Morte.desc} else 
+                if(localStorage.getItem("results") === "Sangue") {userDesc = elements.Sangue.desc} else 
+                if(localStorage.getItem("results") === "Energia") {userDesc = elements.Energia.desc} 
+                else {userDesc = elements.Conhecimento.desc} 
+
+                document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
+                document.getElementById("fraseGuia").innerHTML = `"${userGuia}"`;
+                document.getElementById("descElement").innerHTML = userDesc;
+
+                let originalString = localStorage.getItem("espectro")
+                spectroArray = [];
+                let previousIndex = 0;
+                for(i = 0; i < originalString.length; i++) {
+                    if (originalString[i] == ',') {
+                        separated = originalString.slice(previousIndex, i);
+                        spectroArray.push(separated);
+                        previousIndex = i + 1;
+                    }
+                }
+                
+                spectroArray.push(originalString.slice(previousIndex, i));
+
+                document.getElementById("emocValue").innerHTML = `${spectroArray[0]}%`;
+                document.getElementById("soliValue").innerHTML = `${spectroArray[1]}%`;
+                document.getElementById("ordeValue").innerHTML = `${spectroArray[2]}%`;
+                document.getElementById("caosValue").innerHTML = `${spectroArray[3]}%`;
+                
+            }
+        </script>
+    </body>
 </html>

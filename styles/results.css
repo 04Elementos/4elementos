@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+    font-family: 'Space Mono', monospace;
+}
+
+a {
+    color: goldenrod;
+}
+
+h2 {
+    color: goldenrod;
+    font-family: 'Special Elite', cursive;
+}
+
+h3 {
+    color: goldenrod;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    font-family: 'Special Elite', cursive;
+}
+
+.whiteH3 {
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-family: 'Special Elite', cursive;
+}
+
+p {
+    text-align:justify;  
+    text-justify:inter-word;
+    margin: 5px;
+}
+
+.centerP {
+    margin-top: 10px;
+    text-align: center;  
+    text-justify: none;
+    margin: none;
+}
+
+img {
+    margin-bottom: 15px;
+    filter: drop-shadow(8px 8px 10px gray);
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    background-color: black; 
+    border: 2px solid white;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    width: 65%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid goldenrod;
+    text-align: center;
+    color: white;
+}
+
+.userEspectro {
+    width: 100%;
+    text-align: center;
+}
+
+.userRow {
+    width: 100px;
+    display: inline-block;
+}
+
+.espectroValue {
+    text-align: center;  
+    text-justify: none;
+    margin: 0;
+}
+
+.errorDiv {
+    display: none;
+}

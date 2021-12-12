@@ -1,26 +1,21 @@
-elements = [
-    {
-        "name": "Morte",
-        "desc": "Descrição de Morte",
-        "fraseGuia": "",
-        "espectro": [40, 100, 60, 20]
+elements = {
+    "Morte": {
+        "desc": "Lord Ipsum duis rhoncus leo enim, quis ullamcorper neque consectetur vestibulum. Cras placerat eros in finibus ultricies. Aliquam sagittis id nunc et varius. Morbi pellentesque tincidunt est, ultricies rhoncus leo suscipit eu. Nullam sapien purus, laoreet eu dui et, accumsan hendrerit leo. Sed volutpat tristique augue nec posuere. <br><br>Praesent dapibus feugiat orci, in ornare neque facilisis nec. Duis auctor congue ullamcorper.Duis sit amet ex nisi. In tempus facilisis nunc, et luctus est venenatis eu. Mauris tincidunt nec augue vitae faucibus. Suspendisse eu mi egestas, facilisis mi sed, efficitur sapien. Etiam convallis vestibulum vulputate. In at finibus augue. Phasellus sagittis tortor eu molestie sodales. Phasellus diam turpis, sollicitudin non scelerisque non, posuere varius magna. Suspendisse et maximus neque. Cras sapien mauris, consectetur at metus in, sollicitudin ultricies dolor.",
+        "fraseGuia": "Tudo tem um começo e um fim, e o Tempo leva todas as coisas. Nada que é levado pela Morte pode voltar ao que era antes.",
     },
-    {
-        "name": "Sangue",
+
+    "Sangue": {
         "desc": "Descrição de Sangue",
-        "fraseGuia": "",
-        "espectro": [100, 20, 40, 60]
+        "fraseGuia": "Tudo começa pelo Sangue. O Sangue é o fluxo que banha a eternidade do Outro Lado",
     },
-    {
-        "name": "Energia",
+
+    "Energia": {
         "desc": "Descrição de Energia",
-        "fraseGuia": "",
-        "espectro": [60, 40, 20, 100]
+        "fraseGuia": "O Caos é inevitável.",
     },
-    {
-        "name": "Conhecimento",
+
+    "Conhecimento": {
         "desc": "Descrição de Conhecimento",
-        "fraseGuia": "",
-        "espectro": [20, 60, 100, 40]
-    },
-]
+        "fraseGuia": "Saber tudo é perder tudo.",
+    }
+}
