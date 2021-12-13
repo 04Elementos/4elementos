@@ -17,5 +17,10 @@ elements = {
     "Conhecimento": {
         "desc": "Conhecimento é a entidade da consciência. Descobrir, aprender, conhecer, decifrar. Ter a própria percepção do Outro Lado e suas entidades agrada o elemento de Conhecimento.<br><br>A razão e lógica do Conhecimento reintegram e suprimem o caos da Energia",
         "fraseGuia": "Saber tudo é perder tudo.",
+    },
+
+    "Medo": {
+        "desc": "Você ouve uma música impossível, lê a descrição do elemento, mas você não entende o que leu. O Medo é impossível de entender. Seus 4 espectros são únicos, assim como o Medo.",
+        "fraseGuia": "O Medo é infinito."
     }
 }

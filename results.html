@@ -69,6 +69,11 @@
             </div>
         </div>
 
+        <div class="socials">
+            <a href="https://github.com/GioCerione/4elementos"><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
+            <a href="https://discord.gg/YD4a9FPxh9"><img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial"></a>
+        </div>
+
         <script>
             setTimeout(function() {
                 if (typeof localStorage !== 'undefined') {
@@ -94,10 +99,14 @@
             }
             
             function showResults() {
-                if(name) {
-                    document.getElementById("agentName").innerHTML = `Agente ${name}`
-                } else {
-                    document.getElementById("agentName").innerHTML = 'Agente Desconhecido'
+                if(localStorage.getItem("results") === "Medo") {
+                    document.getElementById("agentName").innerHTML = `Criatura Desconhecida`
+                } else{
+                    if(name) {
+                        document.getElementById("agentName").innerHTML = `Agente ${name}`
+                    } else {
+                        document.getElementById("agentName").innerHTML = 'Agente Desconhecido'
+                    }
                 }
 
                 const img = document.getElementById("elementResult")
@@ -107,13 +116,15 @@
                 if(localStorage.getItem("results") === "Morte") {userGuia = elements.Morte.fraseGuia} else 
                 if(localStorage.getItem("results") === "Sangue") {userGuia = elements.Sangue.fraseGuia} else 
                 if(localStorage.getItem("results") === "Energia") {userGuia = elements.Energia.fraseGuia} 
-                else {userGuia = elements.Conhecimento.fraseGuia} 
+                if(localStorage.getItem("results") === "Conhecimento") {userGuia = elements.Conhecimento.fraseGuia} 
+                else {userGuia = elements.Medo.fraseGuia} 
 
                 let userDesc;
                 if(localStorage.getItem("results") === "Morte") {userDesc = elements.Morte.desc} else 
                 if(localStorage.getItem("results") === "Sangue") {userDesc = elements.Sangue.desc} else 
                 if(localStorage.getItem("results") === "Energia") {userDesc = elements.Energia.desc} 
-                else {userDesc = elements.Conhecimento.desc} 
+                if(localStorage.getItem("results") === "Conhecimento") {userGuia = elements.Conhecimento.desc} 
+                else {userDesc = elements.Medo.desc} 
 
                 document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
                 document.getElementById("fraseGuia").innerHTML = `"${userGuia}"`;

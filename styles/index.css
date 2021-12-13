@@ -33,12 +33,25 @@ img {
     filter: drop-shadow(8px 8px 10px gray);
 }
 
+.imgSocial {
+    margin: 25px;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(4px 4px 10px gray);
+}
+
 .container {
     width: 65%;
     margin: auto;
-    margin-top: 5%;
     padding: 20px;
     border: 2px solid goldenrod;
+    text-align: center;
+    color: white;
+}
+
+.socials {
+    width: 65%;
+    margin: auto;
     text-align: center;
     color: white;
 }
@@ -95,5 +108,12 @@ img {
         width: 65px;
         height: 75px;
         filter: drop-shadow(8px 8px 10px gray);
+    }
+
+    .imgSocial {
+        margin-top: 40px;
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(4px 4px 10px gray);
     }
   }

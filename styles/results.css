@@ -74,6 +74,20 @@ button:hover {
     color: white;
 }
 
+.socials {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.imgSocial {
+    margin: 25px;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(4px 4px 10px gray);
+}
+
 .userEspectro {
     width: 100%;
     text-align: center;
@@ -121,5 +135,12 @@ button:hover {
         width: 80px;
         height: 80px;
         filter: drop-shadow(8px 8px 10px gray);
+    }
+    
+    .imgSocial {
+        margin-top: 40px;
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(4px 4px 10px gray);
     }
   }
