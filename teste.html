@@ -26,7 +26,7 @@
                 <h2>4Elementos - Teste de Afinidade</h2>
             </div>
             <div class="recomendation">
-                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste. Utilize o botão voltar para mudar uma resposta, se precisar.</p>
+                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua ÚLTIMA resposta, se precisar.</p>
             </div>
 
             <div>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="controls">
-                <button class="previous">Voltar</button>
+                <button class="previous" onclick="prev()">Voltar</button>
             </div>
         </div>
 
@@ -73,6 +73,7 @@
             let answers = new Object;
             let actualQ = 1;
             let qn = 0;
+            let prev_answer = null;
             let result = {
                 emocao: 1,
                 solidao: 1,
@@ -115,6 +116,8 @@
                     caos: result.caos += questionsObject[questionsOrder[qn]].effect.caos * answer,
                 }
 
+                prev_answer = answer;
+
                 console.log(questionsObject[questionsOrder[qn]].effect.emocao)
                 qn++;
 
@@ -125,6 +128,24 @@
                 }
 
                 console.log(result)
+            }
+
+            function prev() {
+                if (prev_answer == null) {
+                    return;
+                }
+
+                qn--;
+                result = {
+                    emocao: result.emocao -= questionsObject[questionsOrder[qn]].effect.emocao * prev_answer,
+                    solidao: result.solidao -= questionsObject[questionsOrder[qn]].effect.solidao * prev_answer,
+                    ordem: result.ordem -= questionsObject[questionsOrder[qn]].effect.ordem * prev_answer,
+                    caos: result.caos -= questionsObject[questionsOrder[qn]].effect.caos * prev_answer,
+                }
+
+                prev_answer = null;
+                init_question();
+
             }
 
             function lastScreen() {
