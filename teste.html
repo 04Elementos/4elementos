@@ -117,8 +117,6 @@
                 }
 
                 prev_answer = answer;
-
-                console.log(questionsObject[questionsOrder[qn]].effect.emocao)
                 qn++;
 
                 if (qn < questionsOrder.length) {
@@ -126,8 +124,6 @@
                 } else {
                     lastScreen()
                 }
-
-                console.log(result)
             }
 
             function prev() {
@@ -170,8 +166,6 @@
                     50 + Math.floor(percentage(result.caos, 80)),
                 ] 
 
-                // { emocao: 71, solidao: 52, ordem: 41, caos: 61 }
-
                 emocArray = ["Sangue", "Energia", "Morte", "Conhecimento"]
                 soliArray = ["Morte", "Conhecimento", "Energia", "Sangue"]
                 ordeArray = ["Conhecimento", "Morte", "Sangue", "Energia"]
@@ -183,8 +177,6 @@
                     if (val > 50) { return arr[2]} 
                     else { return arr[3] }
                 }
-
-                console.log(porcentRes)
 
                 const userEspectro = [
                     checkElements(porcentRes[0], emocArray),
@@ -207,7 +199,6 @@
                 let validateUser;
 
                 if(validateElement(userEspectro).length === 4){
-                    // Easter egg, se todos os elementos empatarem, o resultado é Medo.
                     validateUser = "Medo"
                 } else if(validateElement(userEspectro).length === 2){
                     validateUser = validateElement(userEspectro)[0]
