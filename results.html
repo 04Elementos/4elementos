@@ -41,9 +41,6 @@
                 <img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste">
                 <p class="centerP" id="fraseGuia"></p>
 
-                <h3>Descrição</h3>
-                <p id="descElement"></p>
-
                 <h3>Seu Espectro</h3>
                 <div class="userEspectro">
                     <div class="userRow">
@@ -66,12 +63,16 @@
                         <p id="caosValue" class="espectroValue"></p>
                     </div>
                 </div>
+
+                <h3>Descrição</h3>
+                <p id="descElement"></p>
             </div>
         </div>
 
         <div class="socials">
             <a href="https://github.com/GioCerione/4elementos"><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
             <a href="https://discord.gg/YD4a9FPxh9"><img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial"></a>
+            <a href="https://twitter.com/Elementos04"><img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial"></a>
         </div>
 
         <script>
@@ -115,14 +116,14 @@
                 let userGuia;
                 if(localStorage.getItem("results") === "Morte") {userGuia = elements.Morte.fraseGuia} else 
                 if(localStorage.getItem("results") === "Sangue") {userGuia = elements.Sangue.fraseGuia} else 
-                if(localStorage.getItem("results") === "Energia") {userGuia = elements.Energia.fraseGuia} 
+                if(localStorage.getItem("results") === "Energia") {userGuia = elements.Energia.fraseGuia} else
                 if(localStorage.getItem("results") === "Conhecimento") {userGuia = elements.Conhecimento.fraseGuia} 
                 else {userGuia = elements.Medo.fraseGuia} 
 
                 let userDesc;
                 if(localStorage.getItem("results") === "Morte") {userDesc = elements.Morte.desc} else 
                 if(localStorage.getItem("results") === "Sangue") {userDesc = elements.Sangue.desc} else 
-                if(localStorage.getItem("results") === "Energia") {userDesc = elements.Energia.desc} 
+                if(localStorage.getItem("results") === "Energia") {userDesc = elements.Energia.desc} else
                 if(localStorage.getItem("results") === "Conhecimento") {userGuia = elements.Conhecimento.desc} 
                 else {userDesc = elements.Medo.desc} 
 
