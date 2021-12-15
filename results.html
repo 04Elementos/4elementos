@@ -70,7 +70,7 @@
         </div>
 
         <div class="socials">
-            <a href="https://github.com/GioCerione/4elementos"><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
+            <a href="https://github.com/04Elementos/4elementos"><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
             <a href="https://discord.gg/YD4a9FPxh9"><img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial"></a>
             <a href="https://twitter.com/Elementos04"><img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial"></a>
         </div>
@@ -124,7 +124,7 @@
                 if(localStorage.getItem("results") === "Morte") {userDesc = elements.Morte.desc} else 
                 if(localStorage.getItem("results") === "Sangue") {userDesc = elements.Sangue.desc} else 
                 if(localStorage.getItem("results") === "Energia") {userDesc = elements.Energia.desc} else
-                if(localStorage.getItem("results") === "Conhecimento") {userGuia = elements.Conhecimento.desc} 
+                if(localStorage.getItem("results") === "Conhecimento") {userDesc = elements.Conhecimento.desc} 
                 else {userDesc = elements.Medo.desc} 
 
                 document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
@@ -149,13 +149,6 @@
                 document.getElementById("ordeValue").innerHTML = `${spectroArray[2]}%`;
                 document.getElementById("caosValue").innerHTML = `${spectroArray[3]}%`;
                 
-            }
-
-            function shareTweet() {
-                let userResult = localStorage.getItem("results");
-                let str = `O elemento que eu possuo afinidade é o ${userResult}! Descubra o seu em:`
-
-                window.location.href= `http://twitter.com/share?text=${str}! Descubra o seu em: &url=https://giocerione.github.io/4elementos/&hashtags=Calamidade,OrdemParanormal`
             }
         </script>
     </body>
