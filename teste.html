@@ -159,22 +159,24 @@
                     return (100 * partialValue) / totalValue;
                 } 
 
-                if(result.emocao < 0) {result.emocao = 0}
-                if(result.solidao < 0) {result.solidao = 0}
-                if(result.ordem < 0) {result.ordem = 0}
-                if(result.caos < 0) {result.caos = 0}
+                emocPartial = result.emocao;
+                soliPartial = result.solidao;
+                ordePartial = result.ordem;
+                caosPartial = result.caos;
 
                 const porcentRes =  [
-                    Math.floor(percentage(result.emocao, 30)),
-                    Math.floor(percentage(result.solidao, 30)),
-                    Math.floor(percentage(result.ordem, 30)),
-                    Math.floor(percentage(result.caos, 30)),
+                    Math.floor(percentage(emocPartial, 30)),
+                    Math.floor(percentage(soliPartial, 30)),
+                    Math.floor(percentage(ordePartial, 30)),
+                    Math.floor(percentage(caosPartial, 30)),
                 ] 
 
                 emocArray = ["Sangue", "Energia", "Morte", "Conhecimento"]
                 soliArray = ["Morte", "Conhecimento", "Energia", "Sangue"]
                 ordeArray = ["Conhecimento", "Morte", "Sangue", "Energia"]
                 caosArray = ["Energia", "Sangue", "Conhecimento", "Morte"]
+
+                console.log(maxPartial)
 
                 function checkElements(val, arr) {
                     if (val > 50) { return arr[0]} else
