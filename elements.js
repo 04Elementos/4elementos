@@ -42,7 +42,7 @@ elements = {
             "agts": {
                 "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Carina_Leone'>Carina Leone</a> é uma das protagonistas da série Ordem Paranormal, presente em Calamidade. Ela é uma italiana formada em moda, pertencente a uma família de justiceiros clandestinos que lutam contra o Paranormal, levando o nome Leone.",
                 "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Gal'>Gal</a> é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Gal foi apresentado primeiramente como um antagonista em Desconjuração, sendo o líder dos Escriptas, também conhecidos como Culto do Conhecimento. ",
-                "agt_3": "<a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG) e o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> realizaram o nosso teste e ambos possuem afinidade com Conhecimento.",
+                "agt_3": "<a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG) e o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> (interpretou Alexsander Kothe, Cristopher Cohen, Fernando/Luciano Carvalho, atualmente interpreta Damir Lukic) realizaram o nosso teste e ambos possuem afinidade com Conhecimento.",
             }
         }
     },
