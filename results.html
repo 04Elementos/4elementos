@@ -65,9 +65,20 @@
                 </div>
 
                 <h3>Descrição</h3>
-                <p id="descElement"></p><br>
-                <p class="centerP">Quer saber mais? <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado">Clique aqui</a> ou na imagem do Elemento para ser redirecionado para a página oficial da Wiki!</p>
+                <p id="descElement" class="centerP"></p><br>
             </div>
+
+            <div class="otherInfo">
+                <div class="ordemKnownMembers">
+                    <h3>Outros Agentes</h3>
+                    <p id="known1"></p><br>
+                    <p id="known2"></p><br>
+                    <p id="known3"></p>
+                </div>
+            </div>
+
+            <h3>Obrigado por realizar o teste!</h3>
+            <p class="centerP">Quer conhecer mais sobre o universo? <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado">Clique aqui</a> ou no símbolo do Elemento para ser redirecionado para a página oficial da Wiki! E para ser redirecionado para a página oficial de Ordem Paranormal <a href="https://ordemparanormal.com.br/">clique aqui</a>.</p>
         </div>
 
         <div class="socials">
@@ -145,6 +156,19 @@
                 
                 spectroArray.push(originalString.slice(previousIndex, i));
 
+
+                let otherElementInfo;
+
+                if(localStorage.getItem("results") === "Morte") {otherElementInfo = elements.Morte.outrasInfo} else 
+                if(localStorage.getItem("results") === "Sangue") {otherElementInfo = elements.Sangue.outrasInfo} else 
+                if(localStorage.getItem("results") === "Energia") {otherElementInfo = elements.Energia.outrasInfo} else
+                if(localStorage.getItem("results") === "Conhecimento") {otherElementInfo = elements.Conhecimento.outrasInfo} 
+                else {otherElementInfo = elements.Medo.outrasInfo} 
+
+                document.getElementById("known1").innerHTML = `${otherElementInfo.agts.agt_1}`;
+                document.getElementById("known2").innerHTML = `${otherElementInfo.agts.agt_2}`;
+                document.getElementById("known3").innerHTML = `${otherElementInfo.agts.agt_3}`;
+                
                 document.getElementById("emocValue").innerHTML = `${spectroArray[0]}%`;
                 document.getElementById("soliValue").innerHTML = `${spectroArray[1]}%`;
                 document.getElementById("ordeValue").innerHTML = `${spectroArray[2]}%`;
