@@ -1,0 +1,60 @@
+.morte:hover {
+    filter: drop-shadow(8px 8px 10px rgb(152, 148, 174));
+    transition-duration: 200ms;
+}
+
+.sangue:hover {
+    filter: drop-shadow(8px 8px 10px rgb(245, 57, 57));
+    transition-duration: 200ms;
+}
+
+.energia:hover {
+    filter: drop-shadow(8px 8px 10px rgb(169, 94, 255));
+    transition-duration: 200ms;
+    animation: 0.1s linear infinite forwards shake-animation;
+}
+
+.conhecimento:hover {
+    filter: drop-shadow(8px 8px 10px rgb(242, 210, 29));
+    transition-duration: 200ms;
+}
+
+.SangueResult {
+    animation: 10s infinite forwards sangue-animation;
+}
+
+@keyframes sangue-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(245, 57, 57)); }
+}
+
+.ConhecimentoResult {
+    animation: 10s infinite forwards conhecimento-animation;
+}
+
+@keyframes conhecimento-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(242, 210, 29)); }
+}
+
+.EnergiaResult {
+    animation: 10s infinite forwards energia-animation;
+}
+
+@keyframes energia-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(169, 94, 255)); }
+}
+
+.MorteResult {
+    animation: 10s infinite forwards morte-animation;
+}
+
+@keyframes morte-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(152, 148, 174)); }
+}
+
+.MedoResult {
+    animation: 10s infinite forwards medo-animation;
+}
+
+@keyframes medo-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(76, 118, 255)); }
+}

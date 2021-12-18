@@ -33,11 +33,21 @@ img {
     filter: drop-shadow(8px 8px 10px gray);
 }
 
+img:hover {
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
+}
+
 .imgSocial {
     margin: 25px;
     width: 60px;
     height: 60px;
-    filter: drop-shadow(4px 4px 10px gray);
+    filter: drop-shadow(4px 4px 10px rgb(128, 128, 128));
+}
+
+.imgSocial:hover{
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
 }
 
 .imgSocial:hover{

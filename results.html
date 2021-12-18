@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
         <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
         <link rel="stylesheet" href="styles/results.css">
+        <link rel="stylesheet" href="styles/elementos.css">
         <title>4Elementos</title>
         <script type="application/javascript" src="elements.js"></script>
     </head>
@@ -124,6 +125,7 @@
 
                 const img = document.getElementById("elementResult")
                 img.src = `images/elementos/${localStorage.getItem("results")}.webp`
+                img.classList.add(`${localStorage.getItem("results")}Result`);
 
                 let userGuia;
                 if(localStorage.getItem("results") === "Morte") {userGuia = elements.Morte.fraseGuia} else 
