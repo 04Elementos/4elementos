@@ -88,6 +88,11 @@ button:hover {
     filter: drop-shadow(4px 4px 10px gray);
 }
 
+.imgSocial:hover{
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
+}
+
 .userEspectro {
     width: 100%;
     text-align: center;
