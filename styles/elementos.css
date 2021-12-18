@@ -48,7 +48,7 @@
 }
 
 @keyframes morte-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(167, 161, 209)); }
+	50% { filter: drop-shadow(8px 8px 10px rgb(152, 148, 174)); }
 }
 
 .MedoResult {
