@@ -46,6 +46,11 @@ img {
     height: 150px;
 }
 
+img:hover {
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
+}
+
 button {
     background-color: black; 
     border: 2px solid white;
@@ -86,6 +91,11 @@ button:hover {
     width: 60px;
     height: 60px;
     filter: drop-shadow(4px 4px 10px gray);
+}
+
+.imgSocial:hover{
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
 }
 
 .userEspectro {

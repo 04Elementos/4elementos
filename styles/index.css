@@ -40,6 +40,11 @@ img {
     filter: drop-shadow(4px 4px 10px gray);
 }
 
+.imgSocial:hover{
+    transition-duration: 200ms;
+    transform: translateY(-0.2rem);
+}
+
 .container {
     width: 65%;
     margin: auto;
