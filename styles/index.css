@@ -38,6 +38,10 @@ img:hover {
     transform: translateY(-0.2rem);
 }
 
+.lastResult {
+    display: none;
+}
+
 .imgSocial {
     margin: 25px;
     width: 60px;
