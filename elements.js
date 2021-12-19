@@ -6,7 +6,7 @@ elements = {
             "agts": {
                 "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Dante'>Dante</a>, cujo nome original é Gaspar, é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Ele era um ocultista que foi preso por sua participação em um ritual envolvendo Luciano Carvalho.",
                 "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Boris_Lukic'>Boris Lukic</a> foi um dos protagonistas da série Ordem Paranormal, presente em Calamidade. Ele era um dos Marcados, anteriormente, do lado de Kian, trabalhando junto de outros Escriptas por conta de um acordo que fez com Kian envolvendo o próprio Diabo.",
-                "agt_3": "<a href='https://twitter.com/GuaxinimGamer/status/1471619907167174660?s=20'>GuaGuazinho</a>, o <a>Guaxinim</a> (interpreta o personagem Arthur Cervero) realizou nosso teste e ele possui afinidade com Morte.",
+                "agt_3": "<a href='https://twitter.com/GuaxinimGamer/status/1471619907167174660?s=20'>GuaGuazinho</a>, o <a>Guaxinim</a> (interpreta o personagem Arthur Cervero) e <a href='https://twitter.com/iamKalera/status/1472289643052036096?s=20'>Kalera</a> (interpretou Erin Parker, atualmente interpreta Yuki) realizaram nosso teste e eles originalmente possuiriam afinidade com Morte, porém mudanças no balanceamento fizeram com que seus resultados atualmente sejam Conhecimento.",
             }
         }
     },
@@ -18,7 +18,7 @@ elements = {
             "agts": {
                 "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Agatha_Volkomenn'>Agatha Volkomenn</a> é uma personagem secundária presente em A Ordem Paranormal, Desconjuração e Calamidade. Ela foi uma peça-chave para a solução do caso da Escola Nostradamus de Ensino Médio, na qual era aluna.",
                 "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Arthur_Cervero'>Arthur Cervero</a> é um dos protagonistas da série Ordem Paranormal, presente em O Segredo na Floresta, Desconjuração e Calamidade. Ele era um músico e membro de uma gangue de motoqueiros em Carpazinha, Rio Grande do Sul, que se juntou a Ordo Realitas após perder seus colegas numa luta contra uma criatura paranormal.",
-                "agt_3": "Até o momento, nenhum membro oficial de <a href='https://ordemparanormal.com.br/'>Ordem Paranormal</a> realizou o teste e o resultado foi afinidade com Sangue, manteremos atualizado.",
+                "agt_3": "<a href='https://twitter.com/Rakin/status/1471665341772271620?s=20'>Rakin</a> (interpretou Thiago e Arnaldo Fritz, atualmente interpreta Dante) e <a href='https://twitter.com/bastet_min/status/1472208316805824525?s=20'>Bastet</a> (interpreta o Henri) originalmente tiraram Energia, porém após mudanças no balanceamento, ambos os resultados atualmente seriam Sangue.",
             }
         }
     },
@@ -30,7 +30,7 @@ elements = {
             "agts": {
                 "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Rubens_Naluti'>Rubens Naluti</a> é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Ele é um agente da Ordo Realitas e parceiro de longa data de Johnny Tabasco.",
                 "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Cesar_Oliveira_Cohen'>Cesar 'Kaiser' Oliveira Cohen</a> foi um dos protagonistas da série Ordem Paranormal, presente em O Segredo na Floresta e Desconjuração. Cesar era um programador e hacker brasileiro, residente de São Paulo. Após se juntar à Ordo Realitas, é um dos membros designados ao Caso de Carpazinha.",
-                "agt_3": "<a href='https://twitter.com/Rakin/status/1471665341772271620?s=20'>Rakin</a> (interpretou Thiago e Arnaldo Fritz, atualmente interpreta Dante) e <a href='https://twitter.com/Orenjiro_Art/status/1471583193585397760?s=20'>Orenjiro</a> (ilustrador de Ordem Paranormal) realizaram o nosso teste e ambos possuem afinidade com Energia.",
+                "agt_3": "<a href='https://twitter.com/eujuliovictor/status/1472219964245430273?s=20e'>Júlio Victor</a> (responsável pela trilha sonora em Ordem Paranormal) e <a href='https://twitter.com/Orenjiro_Art/status/1471583193585397760?s=20'>Orenjiro</a> (ilustrador de Ordem Paranormal) realizaram o nosso teste e ambos possuem afinidade com Energia.",
             }
         }
     },
@@ -42,7 +42,7 @@ elements = {
             "agts": {
                 "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Carina_Leone'>Carina Leone</a> é uma das protagonistas da série Ordem Paranormal, presente em Calamidade. Ela é uma italiana formada em moda, pertencente a uma família de justiceiros clandestinos que lutam contra o Paranormal, levando o nome Leone.",
                 "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Gal'>Gal</a> é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Gal foi apresentado primeiramente como um antagonista em Desconjuração, sendo o líder dos Escriptas, também conhecidos como Culto do Conhecimento. ",
-                "agt_3": "<a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG) e o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> (interpretou Alexsander Kothe, Cristopher Cohen, Fernando/Luciano Carvalho, atualmente interpreta Damir Lukic) realizaram o nosso teste e ambos possuem afinidade com Conhecimento.",
+                "agt_3": "<a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG), o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> (interpretou Alexsander Kothe, Cristopher Cohen, Fernando/Luciano Carvalho, atualmente interpreta Damir Lukic), <a href='https://twitter.com/jvdutrag/status/1472203950669582346?s=20'>Over (João)</a> (programador em Ordem Paranormal) realizaram o nosso teste e eles possuem afinidade com Conhecimento.",
             }
         }
     },
