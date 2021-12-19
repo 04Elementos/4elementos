@@ -159,52 +159,76 @@
                     return (100 * partialValue) / totalValue;
                 } 
 
+                function highestSpectrum(arr) {
+                    let max = arr[0]
+                    let where;
+                    let spec;
+
+                    arr.forEach(element => {
+                        if(element > max) {max = element}
+                    })
+
+                    where = arr.indexOf(max)
+
+                    spec = (where === 0) ? 'Sangue'
+                            : (where === 1) ? 'Morte'
+                            : (where === 2) ? 'Conhecimento'
+                            : 'Energia';
+
+                    return spec
+                }
+
+                function checkDraw(arr) {
+                    max = arr[0]
+                    arr.forEach(element => {
+                        if(element > max) { max = element }
+                    })
+
+                    where = arr.indexOf(max)
+                    arr.splice(where, 1)
+
+                    let bol;
+                    for (let i = 1; i < 4; i++) {
+                        if(arr[i] === max) {
+                            bol = true
+                            break;
+                        } else{
+                            bol = false;
+                        }
+                    }
+
+                    return bol;
+                }
+
+                function drawnedElements(arr, compWith) {
+                    max = arr[0]
+                    arr.forEach(element => {
+                        if(element > max) { max = element }
+                    })
+
+                    where = arr.indexOf(max)
+                    let array = [];
+
+                    if(where === 0) { array = ['Sangue']} else 
+                    if(where === 1) { array = ['Morte']} else 
+                    if(where === 2) { array = ['Conhecimento'] }
+                    else { array = ['Energia'] }
+
+                    if(compWith[0] === max) { array.push('Sangue')}  
+                    if(compWith[1] === max) { array.push('Morte')}  
+                    if(compWith[2] === max) { array.push('Conhecimento')}  
+                    if(compWith[3] === max) { array.push('Energia')}  
+
+                    let drawned = array.shift()
+                    return array;
+                }
+
                 const porcentRes =  [
                     50 + Math.floor(percentage(result.emocao, 80)),
                     50 + Math.floor(percentage(result.solidao, 80)),
                     50 + Math.floor(percentage(result.ordem, 80)),
                     50 + Math.floor(percentage(result.caos, 80)),
-                ] 
-
-                emocArray = ["Sangue", "Energia", "Conhecimento", "Morte"]
-                soliArray = ["Morte", "Conhecimento", "Energia", "Sangue"]
-                ordeArray = ["Conhecimento", "Morte", "Sangue", "Energia"]
-                caosArray = ["Energia", "Sangue", "Morte", "Conhecimento"]
-
-                function checkElements(val, arr) {
-                    if (val > 66) { return arr[0]} else
-                    if (val > 57) { return arr[1]} else
-                    if (val > 45) { return arr[2]} 
-                    else { return arr[3] }
-                }
-
-                const userEspectro = [
-                    checkElements(porcentRes[0], emocArray),
-                    checkElements(porcentRes[1], soliArray),
-                    checkElements(porcentRes[2], ordeArray),
-                    checkElements(porcentRes[3], caosArray),
                 ]
-
-                function validateElement(arr) {
-                    const hashmap = arr.reduce( (acc, val) => {
-                        acc[val] = (acc[val] || 0 ) + 1
-                        return acc
-                    },{})
-                    return Object.keys(hashmap).filter(x => {
-                        return hashmap[x] == Math.max.apply(null, 
-                        Object.values(hashmap))
-                    })
-                }
-
-                let validateUser;
-
-                if(validateElement(userEspectro).length === 4){
-                    validateUser = "Medo"
-                } else if(validateElement(userEspectro).length === 2){
-                    validateUser = validateElement(userEspectro)[0]
-                } else {
-                    validateUser = validateElement(userEspectro)
-                }
 
                 const maxValue = 100;
                 const userEspectroPer = [
@@ -214,11 +238,33 @@
                     Math.floor(percentage(porcentRes[3], maxValue))
                 ]
 
+                let bool = checkDraw(porcentRes)
+                let resultEsp;
+
+                if(bool === true) {
+                    const drawned = drawnedElements(userEspectroPer, userEspectroPer)
+                    
+                    if (drawned.length === 4) {
+                        resultEsp = "Medo"
+                    } else {
+                        let winningCases;
+
+                        if (drawned === ["Sangue", "Morte"]) { winningCases = "Morte" } else
+                        if (drawned === ["Sangue", "Conhecimento"]) { winningCases = "Sangue" } else
+                        if (drawned === ["Morte", "Energia"]) { winningCases = "Energia" } else
+                        if (drawned === ["Conhecimento", "Energia"]) { winningCases = "Conhecimento" } else {
+                            winningCases = drawned[0]
+                            resultEsp = winningCases
+                        }
+                    }
+                } else{
+                    resultEsp = highestSpectrum(userEspectroPer)
+                }
+
                 name = document.getElementById("uname").value;
                 localStorage.setItem("name", name);
-                localStorage.setItem("results", validateUser);
                 localStorage.setItem("espectro", userEspectroPer)
-
+                localStorage.setItem("results", resultEsp);
                 location.href = 'results.html';
             }
 
