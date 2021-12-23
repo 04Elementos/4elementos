@@ -1,0 +1,260 @@
+/* 
+======================
+    *Media Queries* 
+======================
+*/
+@media only screen and (max-width: 320px) {
+    .results {
+        padding: 0;
+        min-width: 94vw;
+    }
+
+    .results > div{
+        min-width: 100%;
+    }
+
+    .resultsDiv > div {
+        padding-right: 0!important;
+    }
+}
+
+
+@media only screen and (min-width: 425px) {
+    .page-main {
+        min-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    p {
+        font-size: 14px;
+    }
+
+    .div-start {
+        display: none;
+    }
+
+    .quiz-container h3 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .quiz-container p {
+        font-size: 16px;
+        text-align: justify;  
+        text-justify: newspaper;
+        margin: 2px;
+    }
+
+    .endTest {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .results {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .results > div{
+        min-width: 100%;
+    }
+
+    .results > div:not(last-child),
+    .resultDivs > div:not(last-child),
+    .results > div > div {
+        margin-bottom: 3rem;
+    }
+
+    .heading {
+        text-indent: 23px;
+    }
+
+    h3#agentName {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        min-width: 90vw;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .results.container{
+        padding: 25px;
+        min-width: 90vw;
+    }
+
+    .resultsDiv > div {
+        padding-right: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 2px;
+        padding: 0 5px;
+    }
+
+    .imgSocial {
+        filter: var(--filter);
+    }
+
+    .brand {
+        gap: 4rem;
+    }
+
+    .brand .description,
+    .brand .warnings{
+        flex-basis: 100%;
+    }
+
+    .simbolosHome {
+        justify-content: center;
+    }
+
+    .start {
+        min-width: 100%;
+    }
+
+    .quiz-container {
+        width: 90%;
+    }
+
+    .question {
+        margin-right: 15px!important;
+        margin-left: 15px!important;
+    }
+
+    .controls {
+        margin-bottom: 25px;
+    }
+
+    .option input[type="button"],
+    .previous, 
+    .sendButton,
+    .inputName {
+        width: 90%!important;
+    }
+
+    .results img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer-page {
+      width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 740px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .brand {
+        min-width: 100%
+    }
+
+    .content > {
+        min-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 770px) {
+    .results.container {
+        min-width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container{
+        max-width: 80vw;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .results .otherInfo {
+        align-self: flex-start;
+        flex-basis: 46%;
+    }
+
+    .start {
+        font-size: 28px;
+    }
+
+    .quiz-container {
+        width: 65vw!important;
+    }
+
+    .endTest {
+        width: 40vw!important;
+    }
+
+    .question {
+        width: 50%;
+        font-size: 18px;
+    }
+
+    .options {
+        gap: .625rem;
+    }
+
+    .option input{
+        min-width: 23rem!important;
+    }
+
+    .descElemento,
+    .agradeciment {
+        max-width: 100%!important;
+        align-items: stretch;
+    }
+
+    .results.container {
+        margin-top: 2rem;
+        min-width: 80vw!important;
+    }
+    .results {
+        justify-content: space-around;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1;
+        max-width: 41%;
+        margin-top: 5rem;
+        margin-left: 6rem;
+    }
+
+    .footer-page {
+        width: 30%;
+        color: var(--white);
+    }
+}
