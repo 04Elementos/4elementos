@@ -54,6 +54,11 @@ span {
     color: var(--main-color);
 }
 
+hr {
+    margin: 30px 10px;
+    color: var(--main-color);
+}
+
 .heading{
     color: var(--main-color);
     font-family: var(--Special-Elite);
@@ -66,8 +71,8 @@ span {
 
 h3 {
     margin-bottom: 15px;
-    margin-top: 30px;
-    text-align: left;
+    margin-top: 45px;
+    text-align: center;
     font-size: 26px;
 }
 
@@ -81,7 +86,6 @@ p {
     text-align: justify;  
     text-justify: inter-word;
     margin: 5px;
-    text-indent: 5px;
     line-height: 1.8;
 }
 
@@ -158,7 +162,7 @@ img:hover {
 }
 
 .flex-jc-sb{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .flex-jc-ar{
