@@ -76,7 +76,7 @@
 
             <!-- controls starts -->
             <div class="controls">
-                <button class="previous" class="btn" onclick="prev()">Voltar</button>
+                <button id="previous" class="btn" onclick="prev()">Voltar</button>
             </div>
             <!-- controls ends -->
         </main>
@@ -88,7 +88,7 @@
             <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
         
             <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
-            <input type="submit" name="postButton" class="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
+            <input type="submit" name="postButton" class="btn" id="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
         </div>
         <!-- end test ends -->
 
