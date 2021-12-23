@@ -1,0 +1,469 @@
+/* 
+==========================
+ *Import Responsive CSS* 
+==========================
+*/
+@import 'responsive.css';
+
+
+/* 
+=================
+    *Variables*
+=================
+*/
+:root{
+    /** Theme Color **/
+    --main-color: goldenrod;
+    --white: #fff;
+    --black: #000;
+
+    /** Theme Font Family **/
+    --Space-Mono: 'Space Mono', monospace; 
+    --Special-Elite: 'Special Elite', cursive;
+
+    /** Theme Filter **/
+    --filter: drop-shadow(4px 4px 10px gray);
+
+    /** Transition Duration **/
+    --duration: 200ms;
+
+    /** Theme Border **/
+    --border-main: 2px solid goldenrod;
+    --border-white: 2px solid white;
+}
+
+
+/* 
+===============
+    *Globals* 
+===============
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0.5rem 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--Space-Mono);
+}
+
+a,
+span {
+    color: var(--main-color);
+}
+
+.heading{
+    color: var(--main-color);
+    font-family: var(--Special-Elite);
+}
+
+.sub-heading{
+    font-size: 28px;
+    font-family: var(--Special-Elite);
+}
+
+h3 {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 26px;
+}
+
+.whiteH3 {
+    color: var(--white);
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+p {
+    text-align: justify;  
+    text-justify: inter-word;
+    margin: 5px;
+    text-indent: 5px;
+    line-height: 1.8;
+}
+
+img {
+    filter: var(--filter);
+}
+
+img:hover {
+    transition-duration: var(--duration);
+    transform: translateY(-0.2rem);
+}
+
+.centerP {
+    margin-top: 10px;
+    text-align: center;  
+    text-justify: none;
+    margin: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--black); 
+    padding: 10px 28px;
+    margin: 4px 2px;
+    border: var(--border-white);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--Special-Elite);
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--white);
+    color: var(--black);
+}
+.btn:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.border-container {
+    border: var(--border-main);
+}
+
+.simbol-img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+}
+
+.lastResult {
+    display: none;
+    width: 40vw;
+}
+.lastResult p {
+    margin-bottom: 4em;
+}
+
+.flex{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-jc-sb{
+    justify-content: space-between;
+}
+
+.flex-jc-ar{
+    justify-content: space-around;
+}
+
+/* 
+-----------------
+   *Img Social*
+-----------------
+*/
+.imgSocial {
+    margin: 25px;
+    width: 60px;
+    height: 60px;
+    filter: var(--filter);
+}
+
+.imgSocial:hover{
+    transition-duration: var(--duration);
+    transform: translateY(-0.2rem);
+}
+
+.imgSocial:hover{
+    transition-duration: var(--duration);
+    transform: translateY(-0.2rem);
+}
+
+
+/* 
+==================
+    *Container*
+==================
+*/
+.container-pall {
+    padding: 20px;
+}
+
+main.container.flex.container-pall {
+    padding-top: 3px;
+}
+
+.container {
+    max-width: 80vw;
+    border-radius: 5px;
+    color: var(--white);
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-main);
+    overflow: hidden;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 28.84px;
+}
+
+.brand {
+    padding: 30px 12px;
+    align-items: stretch;
+}
+
+.description {
+    flex-basis: 55%;
+}
+
+.warnings {
+    flex-basis: 40%;
+    border: var(--border-main);
+    border-radius: 6px;
+}
+
+
+/* 
+====================
+  *Quiz Container*
+====================
+*/
+.quiz-container{
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.question {
+    border: var(--border-white);
+    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 26px;
+    padding: 15px;
+}
+
+/* 
+--------------
+  *Options*
+--------------
+*/
+.option > input {
+    max-width: 65rem;
+}
+
+.option input[type="button"], 
+.previous, .sendButton {
+    padding: 10px 28px;
+    margin: 7px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.previous {
+    margin-top: 30px;
+}
+
+
+/* 
+====================
+    *End Test*
+====================
+*/
+.endTest {
+    display: none;
+    width: 70%;
+    padding: 15px;
+    text-align: center;
+}
+
+.inputName {
+    width: 300px;
+    background-color: var(--black); 
+    padding: 10px 28px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: var(--border-white);
+    color: var(--white);
+    font-family: var(--Special-Elite);
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* 
+====================
+    *Footer main*
+====================
+*/
+.simbolosHome {
+    margin: 20px;
+    margin-bottom: 6rem;
+    max-width: 100%;
+    height: auto;
+    gap: 1.8rem;
+}
+
+.start {
+    min-width: 69%;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    margin: 4px 2px;
+    padding: 0.98rem 2rem;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Special-Elite);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+/* 
+====================
+    *Results*
+====================
+*/
+.results {
+    width: 80vw;
+    padding: 3rem;
+}
+
+.results h1 {
+    font-size: 26px;
+}
+
+.img {
+    margin-bottom: 15px;
+    filter: drop-shadow(8px 8px 10px gray);
+    width: 150px;
+    height: 150px;
+}
+
+.img:hover {
+    transition-duration: var(--duration);
+    transform: translateY(-0.2rem);
+}
+
+.userEspectro {
+    width: 100%;
+    text-align: center;
+}
+
+.userRow {
+    width: 100px;
+    display: inline-block;
+}
+
+.espectroValue {
+    text-align: center;  
+    text-justify: none;
+    margin: 0;
+}
+
+.errorDiv {
+    display: none;
+}
+
+
+/* 
+====================
+    *Footer Page*
+====================
+*/
+.footer-page {
+    width: 50%;
+    margin-top: 2rem!important;
+    padding-bottom: 2.4rem;
+}
+
+.footer-page .socials a{
+    min-width: 25%;
+    margin: auto;
+    text-align: center;
+    color: transparent!important;
+}
+
+
+/* 
+====================
+    *Elementos*
+====================
+*/
+.morte:hover {
+    filter: drop-shadow(8px 8px 10px rgb(152, 148, 174));
+    transition-duration: 200ms;
+}
+
+.sangue:hover {
+    filter: drop-shadow(8px 8px 10px rgb(245, 57, 57));
+    transition-duration: 200ms;
+}
+
+.energia:hover {
+    filter: drop-shadow(8px 8px 10px rgb(169, 94, 255));
+    transition-duration: 200ms;
+    animation: 0.1s linear infinite forwards shake-animation;
+}
+
+.conhecimento:hover {
+    filter: drop-shadow(8px 8px 10px rgb(242, 210, 29));
+    transition-duration: 200ms;
+}
+
+.SangueResult {
+    animation: 10s infinite forwards sangue-animation;
+}
+
+@keyframes sangue-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(245, 57, 57)); }
+}
+
+.ConhecimentoResult {
+    animation: 10s infinite forwards conhecimento-animation;
+}
+
+@keyframes conhecimento-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(242, 210, 29)); }
+}
+
+.EnergiaResult {
+    animation: 10s infinite forwards energia-animation;
+}
+
+@keyframes energia-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(169, 94, 255)); }
+}
+
+.MorteResult {
+    animation: 10s infinite forwards morte-animation;
+}
+
+@keyframes morte-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(152, 148, 174)); }
+}
+
+.MedoResult {
+    animation: 10s infinite forwards medo-animation;
+}
+
+@keyframes medo-animation {
+	50% { filter: drop-shadow(8px 8px 10px rgb(76, 118, 255)); }
+}
