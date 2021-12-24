@@ -138,14 +138,6 @@ img:hover {
     object-fit: cover;
 }
 
-.lastResult {
-    display: none;
-    width: 40vw;
-}
-.lastResult p {
-    margin-bottom: 4em;
-}
-
 .flex{
     display: flex;  
     justify-content: center;

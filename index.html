@@ -23,8 +23,8 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/responsive.css">
 
-         <!--  AOS Library  -->
-         <link rel="stylesheet" href="styles/aos.css">
+        <!--  AOS Library  -->
+        <link rel="stylesheet" href="styles/aos.css">
     </head>
 
     <body class="flex flex-column">    
@@ -40,14 +40,22 @@
                 </div>
             </header>
             
-            <section class="brand flex flex-row flex-jc-sb container-pall">
-               <article class="description">
+            <section class="brand flex flex-row flex-jc-sb container-pall" data-aos="fade-right" data-aos-delay="200">
+                <article class="description">
                     <h2 class="heading">Descrição</h2>
                     <p>
                         Esse é um teste feito por fãs de <a href="https://ordemparanormal.com.br/">Ordem Paranormal</a> para que os espectadores consigam descobrir seus possíveis elementos de 
                         afinidade baseado em 20 questões sobre sua personalidade. Sinta-se livre para usar os resultados desse teste como quiser!
                     </p>
-               </article>
+
+                    <section class="otherInfo container-pall" data-aos="fade-right" data-aos-delay="200">
+                        <h3 class="heading">Importante</h3>
+                        <p>
+                            <span>Nenhuma informação pessoal sobre você será divulgada</span>, ao responder o teste você pode opcionalmente divulgar ele com seus amigos. Você também pode se voluntariar
+                            para ajudar a tornar o teste mais efetivo, sugerir novas perguntas ou edições nas atuais.
+                        </p>
+                    </section>
+                </article>
 
                 <aside class="warnings container-pall" data-aos="fade-right" data-aos-delay="200">
                     <h3 class="heading">Avisos</h3>
@@ -62,15 +70,6 @@
                         Quer entrar em contato conosco? Entre no nosso <a href="https://discord.gg/YD4a9FPxh9">Discord</a>! Você também pode procurar a gente no <a href="https://twitter.com/Elementos04">Twitter</a>.
                     </p>
                 </aside>
-            </section>
-            
-
-            <section class="otherInfo container-pall" data-aos="fade-right" data-aos-delay="200">
-                <h3 class="heading">Outras Informações</h3>
-                <p>
-                    <span>Nenhuma informação pessoal sobre você será divulgada</span>, ao responder o teste você pode opcionalmente divulgar ele com seus amigos. Você também pode se voluntariar
-                    para ajudar a tornar o teste mais efetivo, sugerir novas perguntas ou edições nas atuais.
-                </p>
             </section>
 
             <footer class="footer container-pall">
@@ -87,17 +86,6 @@
                     </a>
                 </div>
             </footer>
-
-            <div class="lastResult container-pall">
-                <p>
-                    Se você realizou o teste previamente, clique no botão abaixo para acessar seu último resultado. Você pode repetir o teste clicando no botão "Começar" (substituirá o teste anterior).
-                </p>
-               <div>
-                    <a href="results.html" class="start">
-                        Antigo Resultado
-                    </a>
-               </div>
-            </div>
         </main>
         <!-- container main ends -->
         
@@ -105,13 +93,13 @@
         <footer class="footer-page">
             <div class="socials flex flex-row">
                 <a href="https://github.com/04Elementos/4elementos">
-                    <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
                 </a>
                 <a href="https://discord.gg/YD4a9FPxh9">
-                    <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
                 </a>
                 <a href="https://twitter.com/Elementos04">
-                    <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
                 </a>
             </div>
         </footer>
