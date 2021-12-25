@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="4Elementos">
+        <meta name="twitter:site" content="https://04elementos.github.io/4elementos/">
+        <meta name="twitter:description" content="4Elementos é um site feito por fãs do universo de Ordem Paranormal para que outros fãs possam responder um questionário de 20 perguntas para saber qual elemento eles teriam afinidade baseado nas suas respostas.">
+        <meta name="twitter:image" content="https://04elementos.github.io/4elementos/images/elementos/Conhecimento.webp">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../images/elementos/Medo.webp" type="image/x-icon">
+        <title>4Elementos</title>
+
+        <!-- links css file -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
+
+        <!--  AOS Library  -->
+        <link rel="stylesheet" href="../styles/aos.css">
+    </head>
+    <body class="flex flex-column">
+        <!-- container starts -->
+        <main class="container border-container results flex flex-row flex-jc-sb">
+            <div class="errorDiv">
+                <h2 class="heading">Ops... Algo deu errado!</h2>
+                <p>
+                    Parece que de alguma forma você chegou na página de resultados sem responder o teste, logo, não existem resultados. Se você respondeu o teste e está vendo essa mensagem
+                    significa que o seu navegador provavelmente não tem suporte a algumas tecnologias necessárias para o funcionamento do site. Recomendamos você atualizar seu navegador e tentar novamente!
+                </p>
+
+                <button class="btn b-error" onclick="window.location.href='index.html'">
+                    Página Inicial
+                </button>
+            </div>
+
+            <div class="noError">
+                <div class="welcome">
+                    <h1 class="heading">Boas vindas!</h1>
+                    <h3 id="agentName" class="whiteH3"></h3>
+                </div>
+                
+                <!-- Div Results starts -->
+                <div class="resultsDiv">
+                    <div class="box">
+                        <h3 class="heading">Você possui afinidade com...</h3>
+                        <h3 id="elementResultName" class="whiteH3"></h3>
+                        <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado"><img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste"></a>
+                        <p class="centerP" id="fraseGuia"></p>
+                    </div>
+    
+                    <div class="box">
+                        <h3 class="heading">Seu Espectro</h3>
+                        <!-- user espectro starts -->
+                        <div class="userEspectro">
+                            <!-- single user row -->
+                            <div class="userRow">
+                                <h4 >Emoção</h4>
+                                <p id="emocValue" class="espectroValue"></p>
+                            </div>
+    
+                            <!-- single user row -->
+                            <div class="userRow">
+                                <h4>Tempo</h4>
+                                <p id="soliValue" class="espectroValue"></p>
+                            </div>
+    
+                            <!-- single user row -->
+                            <div class="userRow">
+                                <h4>Razão</h4>
+                                <p id="ordeValue" class="espectroValue"></p>
+                            </div>
+    
+                            <!-- single user row -->
+                            <div class="userRow">
+                                <h4>Caos</h4>
+                                <p id="caosValue" class="espectroValue"></p>
+                            </div>
+                        </div>
+                        <!-- user espectro ends --> 
+                    </div>
+                </div>
+                <!-- Div Results ends -->
+    
+                <div class="box">
+                    <hr>
+                    <div class="descElemento">
+                        <h3 class="heading">Descrição</h3>
+                        <p id="descElement"></p>
+                    </div>
+                    <!-- Other Info starts -->
+                    <div class="otherInfo">
+                        <div class="ordemKnownMembers">
+                            <h3 class="heading">Outros Agentes</h3>
+                            <p><span>ALERTA DE SPOILERS</span>: A partir de aqui você pode encontrar spoilers sobre a situação atual de algum personagem, recomendamos ler apenas se você assistiu até o episódio mais recente de <a href="https://www.youtube.com/playlist?list=PL7ZwE005lvhpwy5LoKj8FXi2MXtJyey54">Ordem Paranormal: Calamidade</a></p><br>
+                            <p id="known1"></p><br>
+                            <p id="known2"></p><br>
+                            <p id="known3"></p>
+                        </div>
+                    </div>
+                    <!-- Other Info ends -->
+                </div>
+    
+                <div class="agradeciment">
+                    <h3 class="heading">Obrigado por realizar o teste!</h3>
+                    <p>Quer conhecer mais sobre o universo? <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado">Clique aqui</a> ou no símbolo do Elemento para ser redirecionado para a página oficial da Wiki! E para ser redirecionado para a página oficial de Ordem Paranormal <a href="https://ordemparanormal.com.br/">clique aqui</a>.</p>
+                
+                    <h3 class="heading">Compartilhe seu resultado conosco!</h3>
+                    <p>Entre no nosso <a href="https://discord.gg/YD4a9FPxh9">Discord</a> e compartilhe seu resultado conosco, assim você também acompanha as novas versões do site! Você também pode postar seu resultado no <a href="https://twitter.com/Elementos04">Twitter</a> e marcar a gente!</p>
+                </div>
+            </div>
+        </main>
+        <!-- container ends -->
+
+        <!-- footer page starts -->
+        <footer class="footer-page">
+            <div class="socials flex flex-row">
+                <a href="https://github.com/04Elementos/4elementos">
+                    <img src="../images/socials/github.png" alt="Ícone do GitHub" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                </a>
+                <a href="https://discord.gg/YD4a9FPxh9">
+                    <img src="../images/socials/discord.png" alt="Ícone do Discord" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                </a>
+                <a href="https://twitter.com/Elementos04">
+                    <img src="../images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                </a>
+            </div>
+        </footer>
+        <!-- footer page ends -->
+
+        <!------- AOS js Library  ---------->
+        <script src="../js/aos.js"></script>
+        <script>
+            // AOS Instance
+            AOS.init();            
+        </script>
+        
+        <script type="application/javascript" src="../js/questions.js"></script>
+        <script type="application/javascript" src="../js/elements.js"></script>
+        <script type="application/javascript" src="../js/app.js"></script>
+        <script type="application/javascript" src="../js/results.js"></script>
+    </body>
+</html>

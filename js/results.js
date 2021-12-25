@@ -16,7 +16,7 @@ setTimeout(function() {
 
 function showErrors() {
     const errorsScreen = document.querySelector('.errorDiv');
-    const resultScreen = document.querySelector('.resultsDiv');
+    const resultScreen = document.querySelector('.noError');
     errorsScreen.style.display = 'block'
     resultScreen.style.display = 'none'
 }
@@ -33,7 +33,7 @@ function showResults() {
     }
 
     const img = document.getElementById("elementResult")
-    img.src = `images/elementos/${localStorage.getItem("results")}.webp`
+    img.src = `../images/elementos/${localStorage.getItem("results")}.webp`
     img.classList.add(`${localStorage.getItem("results")}Result`);
 
     let userGuia;
