@@ -354,12 +354,12 @@ header {
     transform: translateY(-0.2rem);
 }
 
-.userEspectro, .projects {
+.userEspectro {
     width: 100%;
     text-align: center;
 }
 
-.userRow, .projectItem {
+.userRow {
     width: 100px;
     display: inline-block;
 }
