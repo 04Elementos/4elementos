@@ -1,7 +1,7 @@
 questions = [
     {
         "id": 1,
-        "question": "Você permanece calmo e concentrado mesmo sobre pressão.",
+        "question": "Você permanece calmo e concentrado mesmo sob pressão.",
         "effect": {
             "emocao": -1,
             "solidao": 1,
@@ -71,7 +71,7 @@ questions = [
     },
     {
         "id": 8,
-        "question": "Lealdade é uma das qualidades mais admiraveis em um individuo.",
+        "question": "Lealdade é uma das qualidades mais admiráveis em um indivíduo.",
         "effect": {
             "emocao": 2,
             "solidao": -2,
