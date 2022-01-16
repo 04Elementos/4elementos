@@ -56,6 +56,7 @@ function next(answer) {
 
 function prev() {
     if (prev_answer == null) {
+        window.location.href = window.location.href.replace("teste.html", "index.html");
         return;
     }
 
