@@ -21,6 +21,20 @@ function showErrors() {
     resultScreen.style.display = 'none'
 }
 
+function showOtherAgents() {
+    let buttonShowSpoilers = document.querySelector('.showSpoilers');
+    let spoilersContainer = document.querySelector('.spoilersContainer');
+    if(spoilersContainer.style.opacity == 0) {
+        spoilersContainer.style.display = 'block'
+        setTimeout(() => spoilersContainer.style.opacity = 1, 10);
+        buttonShowSpoilers.innerText = 'Ocultar agentes';
+    } else {
+        spoilersContainer.style.opacity = 0;
+        setTimeout(() => spoilersContainer.style.display = 'none', 450);
+        buttonShowSpoilers.innerText = 'Ler sobre os agentes';
+    }
+}
+
 function showResults() {
     if(localStorage.getItem("results") === "Medo") {
         document.getElementById("agentName").innerHTML = `Criatura Desconhecida`
