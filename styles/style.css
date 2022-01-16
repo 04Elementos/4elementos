@@ -119,11 +119,7 @@ img:hover {
     cursor: pointer;
 }
 
-.btn:active {
-    background-color: var(--white);
-    color: var(--black);
-}
-.btn:hover {
+.btn:active, .btn:hover, .btn:focus {
     background-color: var(--white);
     color: var(--black);
 }
@@ -322,7 +318,7 @@ header {
     cursor: pointer;
 }
 
-.start:hover {
+.start:hover, .start:focus {
     background-color: var(--white);
     color: var(--black);
 }
@@ -337,6 +333,16 @@ header {
     width: 80vw;
     padding: 3rem;
 }
+
+.showSpoilers {
+    margin-bottom: 1rem;
+}
+
+.spoilersContainer {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+} 
 
 .results h1 {
     font-size: 26px;
