@@ -25,7 +25,7 @@ function showOtherAgents() {
     let buttonShowSpoilers = document.querySelector('.showSpoilers');
     let spoilersContainer = document.querySelector('.spoilersContainer');
     if(spoilersContainer.style.opacity == 0) {
-        spoilersContainer.style.display = 'block'
+        spoilersContainer.style.display = 'block';
         setTimeout(() => spoilersContainer.style.opacity = 1, 10);
         buttonShowSpoilers.innerText = 'Ocultar agentes';
     } else {
