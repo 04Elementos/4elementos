@@ -54,6 +54,11 @@ span {
     color: var(--main-color);
 }
 
+hr {
+    margin: 30px 10px;
+    color: var(--main-color);
+}
+
 .heading{
     color: var(--main-color);
     font-family: var(--Special-Elite);
@@ -66,8 +71,8 @@ span {
 
 h3 {
     margin-bottom: 15px;
-    margin-top: 30px;
-    text-align: left;
+    margin-top: 45px;
+    text-align: center;
     font-size: 26px;
 }
 
@@ -81,7 +86,6 @@ p {
     text-align: justify;  
     text-justify: inter-word;
     margin: 5px;
-    text-indent: 5px;
     line-height: 1.8;
 }
 
@@ -115,11 +119,7 @@ img:hover {
     cursor: pointer;
 }
 
-.btn:active {
-    background-color: var(--white);
-    color: var(--black);
-}
-.btn:hover {
+.btn:active, .btn:hover, .btn:focus {
     background-color: var(--white);
     color: var(--black);
 }
@@ -132,14 +132,6 @@ img:hover {
     width: 150px; 
     height: 150px;
     object-fit: cover;
-}
-
-.lastResult {
-    display: none;
-    width: 40vw;
-}
-.lastResult p {
-    margin-bottom: 4em;
 }
 
 .flex{
@@ -158,7 +150,7 @@ img:hover {
 }
 
 .flex-jc-sb{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .flex-jc-ar{
@@ -265,15 +257,11 @@ header {
 }
 
 .option input[type="button"], 
-.previous, .sendButton {
+#previous, #sendButton {
     padding: 10px 28px;
     margin: 7px;
     width: 300px;
     font-size: 16px;
-}
-
-.previous {
-    margin-top: 30px;
 }
 
 
@@ -330,7 +318,7 @@ header {
     cursor: pointer;
 }
 
-.start:hover {
+.start:hover, .start:focus {
     background-color: var(--white);
     color: var(--black);
 }
@@ -345,6 +333,16 @@ header {
     width: 80vw;
     padding: 3rem;
 }
+
+.showSpoilers {
+    margin-bottom: 1rem;
+}
+
+.spoilersContainer {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+} 
 
 .results h1 {
     font-size: 26px;

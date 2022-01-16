@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="4Elementos - Teste de Personalidade">
-        <meta name="twitter:site" content="https://giocerione.github.io/4elementos/">
+        <meta name="twitter:title" content="4Elementos">
+        <meta name="twitter:site" content="https://04elementos.github.io/4elementos/">
         <meta name="twitter:description" content="4Elementos é um site feito por fãs do universo de Ordem Paranormal para que outros fãs possam responder um questionário de 20 perguntas para saber qual elemento eles teriam afinidade baseado nas suas respostas.">
-        <meta name="twitter:image" content="https://giocerione.github.io/4elementos/images/elementos/Conhecimento.webp">
+        <meta name="twitter:image" content="https://04elementos.github.io/4elementos/images/elementos/Conhecimento.webp">
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/elementos/Medo.webp" type="image/x-icon">
         <title>4Elementos || Teste</title>
 
-        <!-- link css file -->
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/responsive.css">
+        <!-- links css file -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
     </head>
 
     <body class="flex flex-column" style="height: 100%;">
@@ -29,12 +29,12 @@
         <main class="quiz-container container border-container">
             <!-- title -->
             <div class="title">
-                <h2 class="sub-heading">4Elementos - Teste de Afinidade</h>
+                <h2 class="sub-heading"><span>4Elementos</span> - Teste de Afinidade</h>
             </div>
 
             <!-- recomendation starts -->
             <div class="recomendation">
-                <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua <span>ÚLTIMA</span> resposta, se precisar.</p>
+                <p>Recomendamos fortemente que você <span>evite em marcar a opção "neutro"</span> para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua <span>ÚLTIMA</span> resposta, se precisar.</p>
             </div>
             <!-- recomendation ends -->
 
@@ -76,7 +76,7 @@
 
             <!-- controls starts -->
             <div class="controls">
-                <button class="previous" class="btn" onclick="prev()">Voltar</button>
+                <button id="previous" class="btn" onclick="prev()">Voltar</button>
             </div>
             <!-- controls ends -->
         </main>
@@ -88,13 +88,13 @@
             <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
         
             <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
-            <input type="submit" name="postButton" class="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
+            <input type="submit" name="postButton" class="btn" id="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
         </div>
         <!-- end test ends -->
 
 
-        <script type="application/javascript" src="js/questions.js"></script>
-        <script type="application/javascript" src="js/elements.js"></script>
-        <script type="application/javascript" src="js/app.js"></script>
+        <script type="application/javascript" src="../js/questions.js"></script>
+        <script type="application/javascript" src="../js/elements.js"></script>
+        <script type="application/javascript" src="../js/app.js"></script>
     </body>
 </html>
