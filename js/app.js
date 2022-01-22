@@ -1,3 +1,4 @@
+//**** ***Data Initial*** ****
 let answers = new Object;
 let actualQ = 1;
 let qn = 0;
@@ -8,10 +9,22 @@ let result = {
     ordem: 1,
     caos: 1,
 }
-
 let questionsObject = new Object();
 questions.forEach(populateQO);
 
+
+//****
+let questionsOrder = Object.keys(questionsObject);
+shuffleArray(questionsOrder);
+
+
+//**** ***Initializate function init_question()*** ****
+init_question();
+
+
+//***** ***Functions*** *****
+
+//*** functions for myNav
 function openNav() {
   document.getElementById("myNav").style.display = "block";
 }
@@ -19,56 +32,72 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
+//*** ------------------
 
+
+//*** function populate question
 function populateQO(value) {
     questionsObject[value['id']] = value
 }
+//*** ------------------
 
-let questionsOrder = Object.keys(questionsObject);
-shuffleArray(questionsOrder);
 
+//*** function shuffle array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+//*** ------------------
 
-init_question();
 
+//*** function init question
 function init_question() {
     document.getElementById("question").innerHTML = `<span>#${qn+1}</span> | ${questionsObject[questionsOrder[qn]].question}`;
 }
+//*** ------------------
 
+
+//*** function next question
 function next(answer) {
+    //***
     if (qn === questionsOrder.length) {
         return;
     }
 
+    //***
     answers[questionsOrder[qn]] = answer;
     result = {
         emocao: result.emocao += questionsObject[questionsOrder[qn]].effect.emocao * answer,
         solidao: result.solidao += questionsObject[questionsOrder[qn]].effect.solidao * answer,
         ordem: result.ordem += questionsObject[questionsOrder[qn]].effect.ordem * answer,
         caos: result.caos += questionsObject[questionsOrder[qn]].effect.caos * answer,
-    }
+    };
 
+    //***
     prev_answer = answer;
     qn++;
 
+    //***
     if (qn < questionsOrder.length) {
         init_question();
     } else {
-        lastScreen()
+        lastScreen();
     }
 }
+//*** ------------------
 
+
+//*** function prev question
 function prev() {
+    //***
     if (prev_answer == null) {
         window.location.href = window.location.href.replace("teste.html", "index.html");
         return;
     }
 
+    //***
     qn--;
     result = {
         emocao: result.emocao -= questionsObject[questionsOrder[qn]].effect.emocao * prev_answer,
@@ -77,49 +106,69 @@ function prev() {
         caos: result.caos -= questionsObject[questionsOrder[qn]].effect.caos * prev_answer,
     }
 
+    //***
     prev_answer = null;
     init_question();
-
 }
+//*** ------------------
 
+
+//*** function prev question
 function lastScreen() {
+    //***
     const container = document.querySelector('.quiz-container');
     const lastScreen = document.querySelector('.endTest');
 
+    //***
     container.style.display = 'none';
     lastScreen.style.display = 'flex';
     lastScreen.style.width = "100%";
 }
+//*** ------------------
 
+
+//*** function send resuls
 function sendResults() {
+    //***
     localStorage.clear();
 
+    //*** percentage
     function percentage(partialValue, totalValue) {
         return (100 * partialValue) / totalValue;
     }
+    //*** ------------
 
+    //*** function highest spectrum
     function highestSpectrum(arr) {
+        //**
         let max = arr[0]
         let where;
         let spec;
 
+        //**
         arr.forEach(element => {
             if (element > max) {
                 max = element
             }
         })
 
+        //**
         where = arr.indexOf(max)
 
+        //**
         spec = (where === 0) ? 'Sangue' :
             (where === 1) ? 'Morte' :
             (where === 2) ? 'Conhecimento' :
             'Energia';
 
+        //**
         return spec
     }
+    //*** ------------
 
+    //*** function check draw question
     function checkDraw(arr) {
+        //**
         max = arr[0]
         arr.forEach(element => {
             if (element > max) {
@@ -127,9 +176,11 @@ function sendResults() {
             }
         })
 
+        //**
         where = arr.indexOf(max)
         arr.splice(where, 1)
 
+        //**
         let bol;
         for (let i = 1; i < 4; i++) {
             if (arr[i] === max) {
@@ -140,10 +191,14 @@ function sendResults() {
             }
         }
 
+        //**
         return bol;
     }
+    //*** ------------
 
+    //*** function drawned elements
     function drawnedElements(arr, compWith) {
+        //**
         max = arr[0]
         arr.forEach(element => {
             if (element > max) {
@@ -151,9 +206,11 @@ function sendResults() {
             }
         })
 
+        //**
         where = arr.indexOf(max)
         let array = [];
 
+        //**
         if (where === 0) {
             array = ['Sangue']
         } else
@@ -166,6 +223,7 @@ function sendResults() {
             array = ['Energia']
         }
 
+        //**
         if (compWith[0] === max) {
             array.push('Sangue')
         }
@@ -179,10 +237,13 @@ function sendResults() {
             array.push('Energia')
         }
 
+        //**
         let drawned = array.shift()
         return array;
     }
+    //*** ------------
 
+    //***
     const porcentRes = [
         50 + Math.floor(percentage(result.emocao, 80)),
         50 + Math.floor(percentage(result.solidao, 80)),
@@ -190,6 +251,7 @@ function sendResults() {
         50 + Math.floor(percentage(result.caos, 80)),
     ]
 
+    //***
     const maxValue = 100;
     const userEspectroPer = [
         Math.floor(percentage(porcentRes[0], maxValue)),
@@ -198,40 +260,49 @@ function sendResults() {
         Math.floor(percentage(porcentRes[3], maxValue))
     ]
 
+    //***
     let bool = checkDraw(porcentRes)
     let resultEsp;
 
+    //***
     if (bool === true) {
-        const drawned = drawnedElements(userEspectroPer, userEspectroPer)
+        //**
+        const drawned = drawnedElements(userEspectroPer, userEspectroPer);
 
+        //**
         if (drawned.length === 4) {
-            resultEsp = "Medo"
+            //**
+            resultEsp = "Medo";
         } else {
+            //**
             let winningCases;
 
+            //**
             if (drawned === ["Sangue", "Morte"]) {
-                winningCases = "Morte"
+                winningCases = "Morte";
             } else
             if (drawned === ["Sangue", "Conhecimento"]) {
-                winningCases = "Sangue"
+                winningCases = "Sangue";
             } else
             if (drawned === ["Morte", "Energia"]) {
-                winningCases = "Energia"
+                winningCases = "Energia";
             } else
             if (drawned === ["Conhecimento", "Energia"]) {
-                winningCases = "Conhecimento"
+                winningCases = "Conhecimento";
             } else {
-                winningCases = drawned[0]
-                resultEsp = winningCases
+                winningCases = drawned[0];
+                resultEsp = winningCases;
             }
         }
     } else {
+        //***
         resultEsp = highestSpectrum(userEspectroPer)
     }
 
+    //***
     name = document.getElementById("uname").value;
     localStorage.setItem("name", name);
-    localStorage.setItem("espectro", userEspectroPer)
+    localStorage.setItem("espectro", userEspectroPer);
     localStorage.setItem("results", resultEsp);
     location.href = 'results.html';
 }
