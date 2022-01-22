@@ -1,6 +1,6 @@
-/* 
+/*
 ======================
-    *Media Queries* 
+    *Media Queries*
 ======================
 */
 @media only screen and (max-width: 320px) {
@@ -25,6 +25,19 @@
     }
 }
 
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
 @media only screen and (max-width: 690px) {
     p {
         font-size: 14px;
@@ -41,7 +54,7 @@
 
     .quiz-container p {
         font-size: 16px;
-        text-align: justify;  
+        text-align: justify;
         text-justify: newspaper;
         margin: 2px;
     }
@@ -81,7 +94,7 @@
         padding: 10px;
         text-align: center;
     }
-    
+
     .results.container{
         padding: 25px;
         min-width: 90vw;
@@ -140,7 +153,7 @@
     }
 
     .option input[type="button"],
-    .previous, 
+    .previous,
     .sendButton,
     .inputName {
         width: 90%!important;
@@ -182,7 +195,7 @@
     .container{
         max-width: 80vw;
     }
-    
+
     h1 {
         font-size: 32px;
     }
@@ -190,7 +203,7 @@
     h2 {
         font-size: 30px;
     }
-    
+
     h3 {
         font-size: 28px;
     }

@@ -1,41 +1,35 @@
-/* 
+/*
 ==========================
- *Import Responsive CSS* 
+ *Import Responsive CSS*
 ==========================
 */
 @import 'responsive.css';
 
-
-/* 
+/*
 =================
     *Variables*
 =================
 */
-:root{
+:root {
     /** Theme Color **/
     --main-color: goldenrod;
     --white: #fff;
     --black: #000;
-
     /** Theme Font Family **/
-    --Space-Mono: 'Space Mono', monospace; 
+    --Space-Mono: 'Space Mono', monospace;
     --Special-Elite: 'Special Elite', cursive;
-
     /** Theme Filter **/
     --filter: drop-shadow(4px 4px 10px gray);
-
     /** Transition Duration **/
     --duration: 200ms;
-
     /** Theme Border **/
     --border-main: 2px solid goldenrod;
     --border-white: 2px solid white;
 }
 
-
-/* 
+/*
 ===============
-    *Globals* 
+    *Globals*
 ===============
 */
 * {
@@ -55,16 +49,17 @@ span {
 }
 
 hr {
+    width: 100%;
     margin: 30px 10px;
     color: var(--main-color);
 }
 
-.heading{
+.heading {
     color: var(--main-color);
     font-family: var(--Special-Elite);
 }
 
-.sub-heading{
+.sub-heading {
     font-size: 28px;
     font-family: var(--Special-Elite);
 }
@@ -83,7 +78,7 @@ h3 {
 }
 
 p {
-    text-align: justify;  
+    text-align: justify;
     text-justify: inter-word;
     margin: 5px;
     line-height: 1.8;
@@ -98,16 +93,20 @@ img:hover {
     transform: translateY(-0.2rem);
 }
 
+.main-section {
+    margin-bottom: 1rem;
+}
+
 .centerP {
     margin-top: 10px;
-    text-align: center;  
+    text-align: center;
     text-justify: none;
     margin: none;
 }
 
 .btn {
     display: inline-block;
-    background-color: var(--black); 
+    background-color: var(--black);
     padding: 10px 28px;
     margin: 4px 2px;
     border: var(--border-white);
@@ -129,13 +128,19 @@ img:hover {
 }
 
 .simbol-img {
-    width: 150px; 
+    width: 150px;
     height: 150px;
     object-fit: cover;
 }
 
-.flex{
-    display: flex;  
+/*
+==================
+   *Styles for
+   Display Flex*
+==================
+*/
+.flex {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -149,15 +154,19 @@ img:hover {
     flex-direction: column;
 }
 
-.flex-jc-sb{
+.flex-jc-sbt {
+    justify-content: space-between;
+}
+
+.flex-jc-sb {
     justify-content: space-evenly;
 }
 
-.flex-jc-ar{
+.flex-jc-ar {
     justify-content: space-around;
 }
 
-/* 
+/*
 -----------------
    *Img Social*
 -----------------
@@ -169,24 +178,100 @@ img:hover {
     filter: var(--filter);
 }
 
-.imgSocial:hover{
+.imgSocial:hover {
     transition-duration: var(--duration);
     transform: translateY(-0.2rem);
 }
 
-.imgSocial:hover{
+.imgSocial:hover {
     transition-duration: var(--duration);
     transform: translateY(-0.2rem);
 }
 
+/*
+==================
+   *Header Page*
+==================
+*/
+.header-page {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-main);
+    overflow: hidden;
+}
 
-/* 
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+    overflow: hidden;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+/*
 ==================
     *Container*
 ==================
 */
 .container-pall {
     padding: 20px;
+}
+
+.container-ptb {
+    padding: 20px 0;
 }
 
 main.container.flex.container-pall {
@@ -200,16 +285,8 @@ main.container.flex.container-pall {
     text-align: center;
 }
 
-header {
-    width: 100%;
-    margin-bottom: 2rem;
-    border-bottom: var(--border-main);
-    overflow: hidden;
-}
-
 .title h1 {
-    font-size: 2.5rem;
-    margin-bottom: 28.84px;
+    font-size: 1.5rem;
 }
 
 .brand {
@@ -227,13 +304,12 @@ header {
     border-radius: 6px;
 }
 
-
-/* 
+/*
 ====================
   *Quiz Container*
 ====================
 */
-.quiz-container{
+.quiz-container {
     margin: 20px 0;
     padding: 20px;
     text-align: center;
@@ -247,16 +323,16 @@ header {
     padding: 15px;
 }
 
-/* 
+/*
 --------------
   *Options*
 --------------
 */
-.option > input {
+.option>input {
     max-width: 65rem;
 }
 
-.option input[type="button"], 
+.option input[type="button"],
 #previous, #sendButton {
     padding: 10px 28px;
     margin: 7px;
@@ -264,8 +340,7 @@ header {
     font-size: 16px;
 }
 
-
-/* 
+/*
 ====================
     *End Test*
 ====================
@@ -279,7 +354,7 @@ header {
 
 .inputName {
     width: 300px;
-    background-color: var(--black); 
+    background-color: var(--black);
     padding: 10px 28px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -290,8 +365,7 @@ header {
     text-align: center;
 }
 
-
-/* 
+/*
 ====================
     *Footer main*
 ====================
@@ -323,8 +397,7 @@ header {
     color: var(--black);
 }
 
-
-/* 
+/*
 ====================
     *Results*
 ====================
@@ -342,7 +415,7 @@ header {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-} 
+}
 
 .results h1 {
     font-size: 26px;
@@ -371,7 +444,7 @@ header {
 }
 
 .espectroValue {
-    text-align: center;  
+    text-align: center;
     text-justify: none;
     margin: 0;
 }
@@ -380,27 +453,25 @@ header {
     display: none;
 }
 
-
-/* 
+/*
 ====================
     *Footer Page*
 ====================
 */
 .footer-page {
-    width: 50%;
-    margin-top: 2rem!important;
+    width: 100%;
+    margin-top: 2rem !important;
     padding-bottom: 2.4rem;
 }
 
-.footer-page .socials a{
+.footer-page .socials a {
     min-width: 25%;
     margin: auto;
     text-align: center;
-    color: transparent!important;
+    color: transparent !important;
 }
 
-
-/* 
+/*
 ====================
     *Elementos*
 ====================
@@ -431,7 +502,9 @@ header {
 }
 
 @keyframes sangue-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(245, 57, 57)); }
+    50% {
+        filter: drop-shadow(8px 8px 10px rgb(245, 57, 57));
+    }
 }
 
 .ConhecimentoResult {
@@ -439,7 +512,9 @@ header {
 }
 
 @keyframes conhecimento-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(242, 210, 29)); }
+    50% {
+        filter: drop-shadow(8px 8px 10px rgb(242, 210, 29));
+    }
 }
 
 .EnergiaResult {
@@ -447,7 +522,9 @@ header {
 }
 
 @keyframes energia-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(169, 94, 255)); }
+    50% {
+        filter: drop-shadow(8px 8px 10px rgb(169, 94, 255));
+    }
 }
 
 .MorteResult {
@@ -455,7 +532,9 @@ header {
 }
 
 @keyframes morte-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(152, 148, 174)); }
+    50% {
+        filter: drop-shadow(8px 8px 10px rgb(152, 148, 174));
+    }
 }
 
 .MedoResult {
@@ -463,5 +542,7 @@ header {
 }
 
 @keyframes medo-animation {
-	50% { filter: drop-shadow(8px 8px 10px rgb(76, 118, 255)); }
+    50% {
+        filter: drop-shadow(8px 8px 10px rgb(76, 118, 255));
+    }
 }

@@ -10,20 +10,29 @@ let result = {
 }
 
 let questionsObject = new Object();
-    questions.forEach(populateQO);
+questions.forEach(populateQO);
+
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
 
 function populateQO(value) {
     questionsObject[value['id']] = value
 }
 
 let questionsOrder = Object.keys(questionsObject);
-    shuffleArray(questionsOrder);
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+shuffleArray(questionsOrder);
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
 
 init_question();
 
@@ -78,7 +87,8 @@ function lastScreen() {
     const lastScreen = document.querySelector('.endTest');
 
     container.style.display = 'none';
-    lastScreen.style.display = 'block';
+    lastScreen.style.display = 'flex';
+    lastScreen.style.width = "100%";
 }
 
 function sendResults() {
@@ -86,7 +96,7 @@ function sendResults() {
 
     function percentage(partialValue, totalValue) {
         return (100 * partialValue) / totalValue;
-    } 
+    }
 
     function highestSpectrum(arr) {
         let max = arr[0]
@@ -94,15 +104,17 @@ function sendResults() {
         let spec;
 
         arr.forEach(element => {
-            if(element > max) {max = element}
+            if (element > max) {
+                max = element
+            }
         })
 
         where = arr.indexOf(max)
 
-        spec = (where === 0) ? 'Sangue'
-                : (where === 1) ? 'Morte'
-                : (where === 2) ? 'Conhecimento'
-                : 'Energia';
+        spec = (where === 0) ? 'Sangue' :
+            (where === 1) ? 'Morte' :
+            (where === 2) ? 'Conhecimento' :
+            'Energia';
 
         return spec
     }
@@ -110,7 +122,9 @@ function sendResults() {
     function checkDraw(arr) {
         max = arr[0]
         arr.forEach(element => {
-            if(element > max) { max = element }
+            if (element > max) {
+                max = element
+            }
         })
 
         where = arr.indexOf(max)
@@ -118,10 +132,10 @@ function sendResults() {
 
         let bol;
         for (let i = 1; i < 4; i++) {
-            if(arr[i] === max) {
+            if (arr[i] === max) {
                 bol = true
                 break;
-            } else{
+            } else {
                 bol = false;
             }
         }
@@ -132,27 +146,44 @@ function sendResults() {
     function drawnedElements(arr, compWith) {
         max = arr[0]
         arr.forEach(element => {
-            if(element > max) { max = element }
+            if (element > max) {
+                max = element
+            }
         })
 
         where = arr.indexOf(max)
         let array = [];
 
-        if(where === 0) { array = ['Sangue']} else 
-        if(where === 1) { array = ['Morte']} else 
-        if(where === 2) { array = ['Conhecimento'] }
-        else { array = ['Energia'] }
+        if (where === 0) {
+            array = ['Sangue']
+        } else
+        if (where === 1) {
+            array = ['Morte']
+        } else
+        if (where === 2) {
+            array = ['Conhecimento']
+        } else {
+            array = ['Energia']
+        }
 
-        if(compWith[0] === max) { array.push('Sangue')}  
-        if(compWith[1] === max) { array.push('Morte')}  
-        if(compWith[2] === max) { array.push('Conhecimento')}  
-        if(compWith[3] === max) { array.push('Energia')}  
+        if (compWith[0] === max) {
+            array.push('Sangue')
+        }
+        if (compWith[1] === max) {
+            array.push('Morte')
+        }
+        if (compWith[2] === max) {
+            array.push('Conhecimento')
+        }
+        if (compWith[3] === max) {
+            array.push('Energia')
+        }
 
         let drawned = array.shift()
         return array;
     }
 
-    const porcentRes =  [
+    const porcentRes = [
         50 + Math.floor(percentage(result.emocao, 80)),
         50 + Math.floor(percentage(result.solidao, 80)),
         50 + Math.floor(percentage(result.ordem, 80)),
@@ -170,23 +201,31 @@ function sendResults() {
     let bool = checkDraw(porcentRes)
     let resultEsp;
 
-    if(bool === true) {
+    if (bool === true) {
         const drawned = drawnedElements(userEspectroPer, userEspectroPer)
-        
+
         if (drawned.length === 4) {
             resultEsp = "Medo"
         } else {
             let winningCases;
 
-            if (drawned === ["Sangue", "Morte"]) { winningCases = "Morte" } else
-            if (drawned === ["Sangue", "Conhecimento"]) { winningCases = "Sangue" } else
-            if (drawned === ["Morte", "Energia"]) { winningCases = "Energia" } else
-            if (drawned === ["Conhecimento", "Energia"]) { winningCases = "Conhecimento" } else {
+            if (drawned === ["Sangue", "Morte"]) {
+                winningCases = "Morte"
+            } else
+            if (drawned === ["Sangue", "Conhecimento"]) {
+                winningCases = "Sangue"
+            } else
+            if (drawned === ["Morte", "Energia"]) {
+                winningCases = "Energia"
+            } else
+            if (drawned === ["Conhecimento", "Energia"]) {
+                winningCases = "Conhecimento"
+            } else {
                 winningCases = drawned[0]
                 resultEsp = winningCases
             }
         }
-    } else{
+    } else {
         resultEsp = highestSpectrum(userEspectroPer)
     }
 

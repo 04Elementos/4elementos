@@ -13,7 +13,7 @@
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="../images/elementos/Medo.webp" type="image/x-icon">
@@ -27,88 +27,102 @@
         <link rel="stylesheet" href="../styles/aos.css">
     </head>
 
-    <body class="flex flex-column">    
-        <!--  container main starts -->
-        <main class="container flex container-pall">
-            <header class="title flex flex-jc-ar">
+    <body class="flex flex-column">
+        <div class="page">
+            <header class="header-page title flex flex-jc-sbt">
                 <h1 class="heading">4E - Teste de Afinidade</h1>
 
-                <div class="div-start">
-                    <a href="teste.html" class="start">
-                        Começar!
-                    </a>
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+                  <!-- Button to close the overlay navigation -->
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                  <!-- Overlay content -->
+                  <div class="overlay-content">
+                      <a href="#">Inicio</a>
+                      <a href="#">Faça o teste</a>
+                      <a href="#">Descubra seu Arquetipo</a>
+                      <a href="#">Crie sua ficha agora</a>
+                  </div>
                 </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+                <span onclick="openNav()" style="font-size: 1.65rem;">☰</span>
             </header>
-            
-            <section class="brand flex flex-row flex-jc-sb container-pall" data-aos="fade-right" data-aos-delay="200">
-                <article class="description">
-                    <h2 class="heading">Descrição</h2>
-                    <p>
-                        Esse é um teste feito por fãs de <a href="https://ordemparanormal.com.br/">Ordem Paranormal</a> para que os espectadores consigam descobrir seus possíveis elementos de 
-                        afinidade baseado em 20 questões sobre sua personalidade. Sinta-se livre para usar os resultados desse teste como quiser!
-                    </p>
 
-                    <section class="otherInfo container-pall" data-aos="fade-right" data-aos-delay="200">
-                        <h3 class="heading">Importante</h3>
+            <!--  container main starts -->
+            <main class="container flex container-pall" style="max-width: 90vw;">
+                <section class="brand flex flex-row flex-jc-sb container-pall" data-aos="fade-right" data-aos-delay="200">
+                    <article class="description">
+                        <h2 class="heading">Descrição</h2>
                         <p>
-                            <span>Nenhuma informação pessoal sobre você será divulgada</span>, ao responder o teste você pode opcionalmente divulgar ele com seus amigos. Você também pode se voluntariar
-                            para ajudar a tornar o teste mais efetivo, sugerir novas perguntas ou edições nas atuais.
+                            Esse é um teste feito por fãs de <a href="https://ordemparanormal.com.br/">Ordem Paranormal</a> para que os espectadores consigam descobrir seus possíveis elementos de
+                            afinidade baseado em 20 questões sobre sua personalidade. Sinta-se livre para usar os resultados desse teste como quiser!
                         </p>
-                    </section>
-                </article>
 
-                <aside class="warnings container-pall" data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="heading">Avisos</h3>
-                    <p>
-                        Os direitos das imagens e descrições dos elementos vão para seus respectivos donos, apenas atribuimos perguntas de personalidade 
-                        para cada um dos elementos baseado na <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado">descrição de cada um</a>.
-                        É muito importante ressaltar: <a>Não somos um projeto oficial de Ordem Paranormal</a>, somos uma comunidade feita por fãs para fãs. 
-                        Não temos nenhum contato fixo com o Cellbit ou sua equipe.
-                    </p><br>
-                    <p>
-                        Quer entrar em contato conosco? Entre no nosso <a href="https://discord.gg/YD4a9FPxh9">Discord</a>! Você também pode procurar a gente no <a href="https://twitter.com/Elementos04">Twitter</a>.
-                    </p>
-                </aside>
-            </section>
+                        <section class="otherInfo container-pall" data-aos="fade-right" data-aos-delay="200">
+                            <h3 class="heading">Importante</h3>
+                            <p>
+                                <span>Nenhuma informação pessoal sobre você será divulgada</span>, ao responder o teste você pode opcionalmente divulgar ele com seus amigos. Você também pode se voluntariar
+                                para ajudar a tornar o teste mais efetivo, sugerir novas perguntas ou edições nas atuais.
+                            </p>
+                        </section>
+                    </article>
 
-            <footer class="footer container-pall">
-                <div class="simbolosHome flex flex-row flex-jc-sb">
-                    <img src="../images/elementos/Conhecimento.webp" class="simbol-img conhecimento" alt="Símbolo de Conhecimento" data-aos="fade-up-right" data-aos-delay="60">
-                    <img src="../images/elementos/Sangue.webp" class="simbol-img sangue" alt="Símbolo de Sangue" data-aos="fade-up-right" data-aos-delay="40">
-                    <img src="../images/elementos/Energia.webp" class="simbol-img energia" alt="Símbolo de Energia" data-aos="fade-up-right" data-aos-delay="60">
-                    <img src="../images/elementos/Morte.webp" class="simbol-img morte" alt="Símbolo de Morte" data-aos="fade-up-right" data-aos-delay="50">
-                </div>
-                
-                <div class="flex">
-                    <a href="teste.html" class="start">
-                        Começar!
+                    <aside class="warnings container-pall" data-aos="fade-right" data-aos-delay="200">
+                        <h3 class="heading">Avisos</h3>
+                        <p>
+                            Os direitos das imagens e descrições dos elementos vão para seus respectivos donos, apenas atribuimos perguntas de personalidade
+                            para cada um dos elementos baseado na <a href="https://ordemparanormal.fandom.com/wiki/Elementos_do_Outro_Lado">descrição de cada um</a>.
+                            É muito importante ressaltar: <a>Não somos um projeto oficial de Ordem Paranormal</a>, somos uma comunidade feita por fãs para fãs.
+                            Não temos nenhum contato fixo com o Cellbit ou sua equipe.
+                        </p><br>
+                        <p>
+                            Quer entrar em contato conosco? Entre no nosso <a href="https://discord.gg/YD4a9FPxh9">Discord</a>! Você também pode procurar a gente no <a href="https://twitter.com/Elementos04">Twitter</a>.
+                        </p>
+                    </aside>
+                </section>
+
+                <footer class="footer container-pall">
+                    <div class="simbolosHome flex flex-row flex-jc-sb">
+                        <img src="../images/elementos/Conhecimento.webp" class="simbol-img conhecimento" alt="Símbolo de Conhecimento" data-aos="fade-up-right" data-aos-delay="60">
+                        <img src="../images/elementos/Sangue.webp" class="simbol-img sangue" alt="Símbolo de Sangue" data-aos="fade-up-right" data-aos-delay="40">
+                        <img src="../images/elementos/Energia.webp" class="simbol-img energia" alt="Símbolo de Energia" data-aos="fade-up-right" data-aos-delay="60">
+                        <img src="../images/elementos/Morte.webp" class="simbol-img morte" alt="Símbolo de Morte" data-aos="fade-up-right" data-aos-delay="50">
+                    </div>
+
+                    <div class="flex">
+                        <a href="teste.html" class="start">
+                            Começar!
+                        </a>
+                    </div>
+                </footer>
+            </main>
+            <!-- container main ends -->
+
+            <!-- footer page starts -->
+            <footer class="footer-page">
+                <div class="socials flex flex-row">
+                    <a href="https://github.com/04Elementos/4elementos">
+                        <img src="../images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
+                    </a>
+                    <a href="https://discord.gg/YD4a9FPxh9">
+                        <img src="../images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
+                    </a>
+                    <a href="https://twitter.com/Elementos04">
+                        <img src="../images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
                     </a>
                 </div>
             </footer>
-        </main>
-        <!-- container main ends -->
-        
-        <!-- footer page starts -->
-        <footer class="footer-page">
-            <div class="socials flex flex-row">
-                <a href="https://github.com/04Elementos/4elementos">
-                    <img src="../images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
-                </a>
-                <a href="https://discord.gg/YD4a9FPxh9">
-                    <img src="../images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
-                </a>
-                <a href="https://twitter.com/Elementos04">
-                    <img src="../images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
-                </a>
-            </div>
-        </footer>
-        <!-- footer page ends -->
+            <!-- footer page ends -->
+        </div>
 
         <!------- AOS js Library  ---------->
+        <script src="../js/app.js"></script>
         <script src="../js/aos.js"></script>
         <script>
             // AOS Instance
-            AOS.init();            
+            AOS.init();
         </script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,14 @@
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="4Elementos">
         <meta name="twitter:site" content="https://04elementos.github.io/4elementos/">
-        <meta name="twitter:description" content="4Elementos é um site feito por fãs do universo de Ordem Paranormal para que outros fãs possam responder um questionário de 20 perguntas para saber qual elemento eles teriam afinidade baseado nas suas respostas.">
+        <meta name="twitter:description"
+            content="4Elementos é um site feito por fãs do universo de Ordem Paranormal para que outros fãs possam responder um questionário de 20 perguntas para saber qual elemento eles teriam afinidade baseado nas suas respostas.">
         <meta name="twitter:image" content="https://04elementos.github.io/4elementos/images/elementos/Conhecimento.webp">
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
@@ -27,126 +29,152 @@
         <link rel="stylesheet" href="styles/aos.css">
     </head>
 
-    <body class="flex flex-column"> 
-        <!-- container main starts -->
-        <main class="container flex container-pall">
-            <header class="title flex flex-jc-ar">
-                <h1 class="heading">4Elementos</h1>
+    <body class="flex flex-column">
+        <div class="page">
+            <header class="header-page title flex flex-jc-sbt">
+                <h1 class="heading logo">4Elementos</h1>
 
-                <div class="div-start">
-                    <a href="#projects" class="start">
-                        Início
-                    </a>
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+                  <!-- Button to close the overlay navigation -->
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                  <!-- Overlay content -->
+                  <div class="overlay-content">
+                      <a href="#">Inicio</a>
+                      <a href="#">Faça o teste</a>
+                      <a href="#">Descubra seu Arquetipo</a>
+                      <a href="#">Crie sua ficha agora</a>
+                  </div>
                 </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+                <span onclick="openNav()" style="font-size: 1.65rem;">☰</span>
             </header>
 
-            <section>
-                <article>
-                    <h2 class="heading">Sobre a 4Elementos</h2>
-                    <p>
-                        4Elementos é uma comunidade <span>não oficial</span> que reune diversas ferramentas e testes úteis para fãs de 
-                        <a href="http://ordem.jamboeditora.com.br/">Ordem Paranormal RPG</a>. Somos uma comunidade completamente aberta, ou seja, 
-                        <span>todos podem ajudar</span>, opinar, sugerir edições e novas funcionalidades, programadores podem contribuir para o código no 
-                        GitHub e artistas podem nos ajudar na parte estética do site. Nosso primeiro projeto, o <a href=""> Teste de Afinidade</a>,
-                        foi acessado por mais de <span>20 mil pessoas</span> em 3 dias!
-                    </p>
-                    <div class="socials flex flex-row">
-                        <a href="https://github.com/04Elementos/4elementos">
-                            <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
-                        </a>
-                        <a href="https://discord.gg/YD4a9FPxh9">
-                            <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
-                        </a>
-                        <a href="https://twitter.com/Elementos04">
-                            <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
-                        </a>
-                    </div>
-                </article>
+            <!-- container main starts -->
+            <main class="container flex container-pall">
+                <section class="main-section">
+                    <article class="container-ptb">
+                        <h2 class="heading">Sobre a 4Elementos</h2>
+                        <p>
+                            4Elementos é uma comunidade <span>não oficial</span> que reune diversas ferramentas e testes úteis para fãs de
+                            <a href="http://ordem.jamboeditora.com.br/">Ordem Paranormal RPG</a>. Somos uma comunidade completamente aberta, ou seja,
+                            <span>todos podem ajudar</span>, opinar, sugerir edições e novas funcionalidades, programadores podem contribuir para o código no
+                            GitHub e artistas podem nos ajudar na parte estética do site. Nosso primeiro projeto, o <a href=""> Teste de Afinidade</a>,
+                            foi acessado por mais de <span>20 mil pessoas</span> em 3 dias!
+                        </p>
+                        <div class="socials flex flex-row">
+                            <a href="https://github.com/04Elementos/4elementos">
+                                <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
+                            </a>
+                            <a href="https://discord.gg/YD4a9FPxh9">
+                                <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
+                            </a>
+                            <a href="https://twitter.com/Elementos04">
+                                <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
+                            </a>
+                        </div>
+                    </article>
 
-                <article>
-                    <h2 class="heading">Faça parte</h2>
-                    <p>
-                        Toda ajuda é bem vinda, porém, qualquer pessoa que nos ajude já faz parte da 4Elementos. Se você tem interesse em fazer parte do projeto
-                        entre em nosso <a href="">Discord</a>, lá você vai poder ver como nós unimos e organizamos os projetos, trabalhos e discutimos sobre o RPG
-                        e outras coisas! Lembre-se que a idade mínima para criar uma conta no Discord no Brasil é de <span>13 anos</span>.
-                    </p>
-                </article>
+                    <article class="container-ptb">
+                        <h2 class="heading">Faça parte</h2>
+                        <p>
+                            Toda ajuda é bem vinda, porém, qualquer pessoa que nos ajude já faz parte da 4Elementos. Se você tem interesse em fazer parte do projeto
+                            entre em nosso <a href="">Discord</a>, lá você vai poder ver como nós unimos e organizamos os projetos, trabalhos e discutimos sobre o RPG
+                            e outras coisas! Lembre-se que a idade mínima para criar uma conta no Discord no Brasil é de <span>13 anos</span>.
+                        </p>
+                    </article>
 
-                <article>
-                    <h2 class="heading">Avisos</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh, 
-                        in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus. 
-                        Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor. 
-                        Nunc sodales a mauris accumsan mattis.
-                    </p>
-                </article>
+                    <article class="container-ptb">
+                        <h2 class="heading">Avisos</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh,
+                            Nunc sodales a mauris accumsan mattis.
+                            in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus.
+                            Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor.
+                        </p>
+                    </article>
+                </section>
+
                 <hr>
-                <h2 id="projects" class="sub-heading">Nossos projetos</h2>
+                <section class="projects">
+                    <header class="header">
+                        <h2 id="projects" class="sub-heading">Nossos projetos</h2>
+                    </header>
 
-                <div>
-                    <h3 class="heading">Teste de Afinidade</h2>
-                    <p>
-                        Nosso teste de afinidade te relaciona a um dos 4 elementos do universo de <span>Ordem Paranormal</span>
-                        e é atualmente a nossa função mais usada. Você pode usar para se imaginar como um agente da Ordem ou até mesmo criar
-                        seus personagens para ver com qual elementos eles possuem maior afinidade de acordo com a descrição de cada um.
-                    </p>
-                    <br>
-                    <a href="afinidade/index.html" class="btn">
-                        Faça o teste
+                    <article class="container-ptb">
+                        <h3 class="heading">Teste de Afinidade</h2>
+                            <div>
+                                <p>
+                                    Nosso teste de afinidade te relaciona a um dos 4 elementos do universo de <span>Ordem Paranormal</span>
+                                    e é atualmente a nossa função mais usada. Você pode usar para se imaginar como um agente da Ordem ou até mesmo criar
+                                    seus personagens para ver com qual elementos eles possuem maior afinidade de acordo com a descrição de cada um.
+                                </p>
+                                <br>
+                                <a href="afinidade/index.html" class="btn">
+                                    Faça o teste
+                                </a>
+                            </div>
+                    </article>
+
+                    <article class="container-ptb">
+                        <h3 class="heading">Teste de Arquétipos</h2>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh,
+                                    in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus.
+                                    Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor.
+                                </p>
+                                <br>
+                                <a href="#" class="btn">
+                                    Faça o teste
+                                </a>
+                            </div>
+                    </article>
+                    <article class="container-ptb">
+                        <h3 class="heading">Criador de Fichas</h3>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh,
+                                in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus.
+                                Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor.
+                            </p>
+                            <br>
+                            <a href="" class="btn">
+                                Crie sua ficha
+                            </a>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <!-- container main ends -->
+
+            <!-- footer page starts -->
+            <footer class="footer-page flex">
+                <div class="socials flex flex-row">
+                    <a href="https://github.com/04Elementos/4elementos">
+                        <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
+                    </a>
+                    <a href="https://discord.gg/YD4a9FPxh9">
+                        <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
+                    </a>
+                    <a href="https://twitter.com/Elementos04">
+                        <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
                     </a>
                 </div>
+            </footer>
+            <!-- footer page ends -->
+        </div>
 
-                <div>
-                    <h3 class="heading">Teste de Arquétipos</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh, 
-                        in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus. 
-                        Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor. 
-                    </p>
-                    <br>
-                    <a href="" class="btn">
-                        Faça o teste
-                    </a>
-                </div>
-
-                <div>
-                    <h3 class="heading">Criador de Fichas</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis luctus euismod. Duis tincidunt velit nibh, 
-                        in lobortis magna viverra vitae. Nullam fermentum felis vitae pretium lobortis. Nulla eu placerat nunc. Maecenas quis congue tellus. 
-                        Nullam sit amet ligula vitae ante egestas vulputate vitae eget tortor. Integer tincidunt fringilla libero non auctor. 
-                    </p>
-                    <br>
-                    <a href="" class="btn">
-                        Crie sua ficha
-                    </a>
-                </div>
-            </section>
-        </main>
-        <!-- container main ends -->
-
-        <!-- footer page starts -->
-        <footer class="footer-page">
-            <div class="socials flex flex-row">
-                <a href="https://github.com/04Elementos/4elementos">
-                    <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
-                </a>
-                <a href="https://discord.gg/YD4a9FPxh9">
-                    <img src="images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
-                </a>
-                <a href="https://twitter.com/Elementos04">
-                    <img src="images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
-                </a>
-            </div>
-        </footer>
-        <!-- footer page ends -->
 
         <!------- AOS js Library  ---------->
         <script src="js/aos.js"></script>
+        <script src="js/app.js"></script>
         <script>
             // AOS Instance
-            AOS.init();            
+            AOS.init();
         </script>
     </body>
+
 </html>

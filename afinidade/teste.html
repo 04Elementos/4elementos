@@ -13,7 +13,7 @@
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="../images/elementos/Medo.webp" type="image/x-icon">
@@ -25,72 +25,111 @@
     </head>
 
     <body class="flex flex-column" style="height: 100%;">
-        <!-- quiz container  starts -->
-        <main class="quiz-container container border-container">
-            <!-- title -->
-            <div class="title">
-                <h2 class="sub-heading"><span>4Elementos</span> - Teste de Afinidade</h>
-            </div>
+        <div class="page">
+            <header class="header-page title flex flex-jc-sbt">
+                <h1 class="heading">4E - Teste de Afinidade</h1>
 
-            <!-- recomendation starts -->
-            <div class="recomendation">
-                <p>Recomendamos fortemente que você <span>evite em marcar a opção "neutro"</span> para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua <span>ÚLTIMA</span> resposta, se precisar.</p>
-            </div>
-            <!-- recomendation ends -->
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+                  <!-- Button to close the overlay navigation -->
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-            <!-- box question starts-->
-            <div class="box-question flex flex-column">
-                <p id="order" class="order"></p>
-                <div id="question" class="question"></div>
-            </div>
-            <!-- box question ends-->
+                  <!-- Overlay content -->
+                  <div class="overlay-content">
+                      <a href="#">Inicio</a>
+                      <a href="#">Faça o teste</a>
+                      <a href="#">Descubra seu Arquetipo</a>
+                      <a href="#">Crie sua ficha agora</a>
+                  </div>
+                </div>
 
-            <!-- options starts -->
-            <div class="options flex flex-column">
-                <!-- single option -->
-                <label class="option">
-                    <input type="button" class="btn" name="option" id="b1" value="Concordo completamente" onclick="next(2)"/>
-                </label>
-                
-                <!-- single option -->
-                <label class="option">
-                    <input type="button"class="btn" name="option" id="b2" value="Concordo" onclick="next(1)"/>
-                </label>
-                
-                <!-- single option -->
-                <label class="option">
-                    <input type="button" class="btn"  name="option" id="b3" value="Neutro" onclick="next(0)"/>
-                </label>
-    
-                <!-- single option -->
-                <label class="option">
-                    <input type="button" class="btn" name="option" id="b4" value="Discordo" onclick="next(-1)"/>
-                </label>
-    
-                <!-- single option -->
-                <label class="option">
-                    <input type="button" class="btn" name="option" id="b5" value="Discordo completamente" onclick="next(-2)"/>
-                </label>
-            </div>
-            <!-- options ends -->
+                <!-- Use any element to open/show the overlay navigation menu -->
+                <span onclick="openNav()" style="font-size: 1.65rem;">☰</span>
+            </header>
 
-            <!-- controls starts -->
-            <div class="controls">
-                <button id="previous" class="btn" onclick="prev()">Voltar</button>
-            </div>
-            <!-- controls ends -->
-        </main>
-        <!-- quiz container ends -->
+            <!-- quiz container  starts -->
+            <main class="quiz-container container border-container">
+                <!-- title -->
+                <div class="title">
+                    <h2 class="sub-heading"><span>4Elementos</span> - Teste de Afinidade</h>
+                </div>
 
-        <!-- end test starts -->
-        <div class="endTest flex border-container">
-            <h2 class="sub-heading">4Elementos - Fim do teste</h2>
-            <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
-        
-            <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
-            <input type="submit" name="postButton" class="btn" id="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
+                <!-- recomendation starts -->
+                <div class="recomendation">
+                    <p>Recomendamos fortemente que você <span>evite em marcar a opção "neutro"</span> para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua <span>ÚLTIMA</span> resposta, se precisar.</p>
+                </div>
+                <!-- recomendation ends -->
+
+                <!-- box question starts-->
+                <div class="box-question flex flex-column">
+                    <p id="order" class="order"></p>
+                    <div id="question" class="question"></div>
+                </div>
+                <!-- box question ends-->
+
+                <!-- options starts -->
+                <div class="options flex flex-column">
+                    <!-- single option -->
+                    <label class="option">
+                        <input type="button" class="btn" name="option" id="b1" value="Concordo completamente" onclick="next(2)"/>
+                    </label>
+
+                    <!-- single option -->
+                    <label class="option">
+                        <input type="button"class="btn" name="option" id="b2" value="Concordo" onclick="next(1)"/>
+                    </label>
+
+                    <!-- single option -->
+                    <label class="option">
+                        <input type="button" class="btn"  name="option" id="b3" value="Neutro" onclick="next(0)"/>
+                    </label>
+
+                    <!-- single option -->
+                    <label class="option">
+                        <input type="button" class="btn" name="option" id="b4" value="Discordo" onclick="next(-1)"/>
+                    </label>
+
+                    <!-- single option -->
+                    <label class="option">
+                        <input type="button" class="btn" name="option" id="b5" value="Discordo completamente" onclick="next(-2)"/>
+                    </label>
+                </div>
+                <!-- options ends -->
+
+                <!-- controls starts -->
+                <div class="controls">
+                    <button id="previous" class="btn" onclick="prev()">Voltar</button>
+                </div>
+                <!-- controls ends -->
+            </main>
+            <!-- quiz container ends -->
+
+            <!-- end test starts -->
+            <div class="endTest flex border-container">
+                <h2 class="sub-heading">4Elementos - Fim do teste</h2>
+                <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
+
+                <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
+                <input type="submit" name="postButton" class="btn" id="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
+            </div>
+            <!-- end test ends -->
+
+            <!-- footer page starts -->
+            <footer class="footer-page">
+                <div class="socials flex flex-row">
+                    <a href="https://github.com/04Elementos/4elementos">
+                        <img src="../images/socials/github.png" alt="Ícone do GitHub" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    </a>
+                    <a href="https://discord.gg/YD4a9FPxh9">
+                        <img src="../images/socials/discord.png" alt="Ícone do Discord" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    </a>
+                    <a href="https://twitter.com/Elementos04">
+                        <img src="../images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial" data-aos="zoom-in-up" data-aos-delay="60">
+                    </a>
+                </div>
+            </footer>
+            <!-- footer page ends -->
         </div>
-        <!-- end test ends -->
 
 
         <script type="application/javascript" src="../js/questions.js"></script>
