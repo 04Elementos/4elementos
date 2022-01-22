@@ -1,18 +1,29 @@
+// *** Elements for the agents ***
 elements = {
     "Morte": {
-        "desc": "<span>Morte é a entidade do tempo</span>. Ela busca os momentos vivenciados, distorcendo a percepção egóica da existência de cada indivíduo para seu próprio agrado. <span>A distorção temporal da Morte arruína a percepção carnal do Sangue</span>.",
+        "desc": `
+            <span>Morte é a entidade do tempo</span>. Ela busca os momentos vivenciados, distorcendo a percepção egóica da existência de cada indivíduo para seu próprio agrado. <span>A distorção temporal da Morte arruína a percepção carnal do Sangue</span>.
+        `,
         "fraseGuia": "Tudo tem um começo e um fim, e o Tempo leva todas as coisas. Nada que é levado pela Morte pode voltar ao que era antes.",
         "outrasInfo": {
             "agts": {
-                "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Dante'>Dante</a>, cujo nome original é Gaspar, é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Ele era um ocultista que foi preso por sua participação em um ritual envolvendo Luciano Carvalho.",
-                "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Boris_Lukic'>Boris Lukic</a> foi um dos protagonistas da série Ordem Paranormal, presente em Calamidade. Ele era um dos Marcados, anteriormente, do lado de Kian, trabalhando junto de outros Escriptas por conta de um acordo que fez com Kian envolvendo o próprio Diabo.",
-                "agt_3": "<a href='https://twitter.com/GuaxinimGamer/status/1471619907167174660?s=20'>GuaGuazinho</a>, o <a>Guaxinim</a> (interpreta o personagem Arthur Cervero) e <a href='https://twitter.com/iamKalera/status/1472289643052036096?s=20'>Kalera</a> (interpretou Erin Parker, atualmente interpreta Yuki) realizaram nosso teste e eles originalmente possuiriam afinidade com Morte, porém mudanças no balanceamento fizeram com que seus resultados atualmente sejam Conhecimento.",
+                "agt_1": `
+                    <a href='https://ordemparanormal.fandom.com/wiki/Dante'>Dante</a>, cujo nome original é Gaspar, é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Ele era um ocultista que foi preso por sua participação em um ritual envolvendo Luciano Carvalho.
+                `,
+                "agt_2": `
+                    <a href='https://ordemparanormal.fandom.com/wiki/Boris_Lukic'>Boris Lukic</a> foi um dos protagonistas da série Ordem Paranormal, presente em Calamidade. Ele era um dos Marcados, anteriormente, do lado de Kian, trabalhando junto de outros Escriptas por conta de um acordo que fez com Kian envolvendo o próprio Diabo.
+                `,
+                "agt_3": `
+                    <a href='https://twitter.com/GuaxinimGamer/status/1471619907167174660?s=20'>GuaGuazinho</a>, o <a>Guaxinim</a> (interpreta o personagem Arthur Cervero) e <a href='https://twitter.com/iamKalera/status/1472289643052036096?s=20'>Kalera</a> (interpretou Erin Parker, atualmente interpreta Yuki) realizaram nosso teste e eles originalmente possuiriam afinidade com Morte, porém mudanças no balanceamento fizeram com que seus resultados atualmente sejam Conhecimento.
+                `,
             }
         }
     },
 
     "Sangue": {
-        "desc": "<span>Sangue é a entidade do sentimento</span>. Ele busca a intensidade: dor, obsessão, paixão, amor, fome, ódio - tudo que envolve sentir uma emoção extrema agrada a entidade de Sangue. <span>Os sentimentos extremos do Sangue superam a razão e a calmaria do Conhecimento</span>.",
+        "desc": `
+            <span>Sangue é a entidade do sentimento</span>. Ele busca a intensidade: dor, obsessão, paixão, amor, fome, ódio - tudo que envolve sentir uma emoção extrema agrada a entidade de Sangue. <span>Os sentimentos extremos do Sangue superam a razão e a calmaria do Conhecimento</span>.
+        `,
         "fraseGuia": "Tudo começa pelo Sangue. O Sangue é o fluxo que banha a eternidade do Outro Lado",
         "outrasInfo": {
             "agts": {
@@ -40,9 +51,15 @@ elements = {
         "fraseGuia": "Saber tudo é perder tudo.",
         "outrasInfo": {
             "agts": {
-                "agt_1": "<a href='https://ordemparanormal.fandom.com/wiki/Carina_Leone'>Carina Leone</a> é uma das protagonistas da série Ordem Paranormal, presente em Calamidade. Ela é uma italiana formada em moda, pertencente a uma família de justiceiros clandestinos que lutam contra o Paranormal, levando o nome Leone.",
-                "agt_2": "<a href='https://ordemparanormal.fandom.com/wiki/Gal'>Gal</a> é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Gal foi apresentado primeiramente como um antagonista em Desconjuração, sendo o líder dos Escriptas, também conhecidos como Culto do Conhecimento. ",
-                "agt_3": "<a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG), o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> (interpretou Alexsander Kothe, Cristopher Cohen, Fernando/Luciano Carvalho, atualmente interpreta Damir Lukic), <a href='https://twitter.com/jvdutrag/status/1472203950669582346?s=20'>Over (João)</a> (programador em Ordem Paranormal) realizaram o nosso teste e eles possuem afinidade com Conhecimento.",
+                "agt_1": `
+                    <a href='https://ordemparanormal.fandom.com/wiki/Carina_Leone'>Carina Leone</a> é uma das protagonistas da série Ordem Paranormal, presente em Calamidade. Ela é uma italiana formada em moda, pertencente a uma família de justiceiros clandestinos que lutam contra o Paranormal, levando o nome Leone.
+                `,
+                "agt_2": `
+                    <a href='https://ordemparanormal.fandom.com/wiki/Gal'>Gal</a> é um dos protagonistas da série Ordem Paranormal, presente em Desconjuração e Calamidade. Gal foi apresentado primeiramente como um antagonista em Desconjuração, sendo o líder dos Escriptas, também conhecidos como Culto do Conhecimento.
+                `,
+                "agt_3": `
+                    <a href='https://twitter.com/CtrlAltDella/status/1471541579357773828?s=20'>Felipe Della Corte</a> (autor de Ordem Paranormal RPG), o <a href='https://twitter.com/LJoga/status/1471670419434442754?s=20'>Luis (LJoga)</a> (interpretou Alexsander Kothe, Cristopher Cohen, Fernando/Luciano Carvalho, atualmente interpreta Damir Lukic), <a href='https://twitter.com/jvdutrag/status/1472203950669582346?s=20'>Over (João)</a> (programador em Ordem Paranormal) realizaram o nosso teste e eles possuem afinidade com Conhecimento.
+                `
             }
         }
     },
@@ -54,7 +71,7 @@ elements = {
             "agts": {
                 "agt_1": "???",
                 "agt_2": "???",
-                "agt_3": "<a href='https://twitter.com/Elementos04/status/1471874317503897604?s=20'>???</a>",
+                "agt_3": `<a href='https://twitter.com/Elementos04/status/1471874317503897604?s=20'>???</a>`,
             }
         }
     }
