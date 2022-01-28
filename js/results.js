@@ -82,12 +82,12 @@ function showOtherAgents() {
 function setInfoAgents() {
     //****
     if (localStorage.getItem("results") === "Medo") {
-        document.getElementById("agentName").innerHTML = `Criatura Desconhecida`
+        document.getElementById("agentName").innerHTML = `Criatura Desconhecida`;
     } else {
         if (name) {
-            document.getElementById("agentName").innerHTML = `Agente ${name}`
+            document.getElementById("agentName").innerHTML = `Agente ${name}`;
         } else {
-            document.getElementById("agentName").innerHTML = 'Agente Desconhecido'
+            document.getElementById("agentName").innerHTML = 'Agente Desconhecido';
         }
     }
 

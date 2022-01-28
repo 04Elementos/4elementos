@@ -301,6 +301,8 @@ function sendResults() {
 
     //***
     name = document.getElementById("uname").value;
+
+    //***
     localStorage.setItem("name", name);
     localStorage.setItem("espectro", userEspectroPer);
     localStorage.setItem("results", resultEsp);
