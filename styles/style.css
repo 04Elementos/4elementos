@@ -203,6 +203,7 @@ img:hover {
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    display: none;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -240,7 +241,7 @@ img:hover {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: var(--white);
     display: block;
     /* Display block instead of inline */
     transition: 0.3s;
@@ -249,7 +250,7 @@ img:hover {
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: goldenrod;
 }
 
 /* Position the close button (top right corner) */
