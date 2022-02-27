@@ -45,20 +45,40 @@
                 </div>
 
                 <!-- Use any element to open/show the overlay navigation menu -->
-                <span onclick="openNav()" style="font-size: 1.65rem;">☰</span>
+                <span onclick="openNav()" style="font-size: 1.65rem; cursor: pointer;">☰</span>
             </header>
 
             <!--  container main starts -->
             <main class="quiz-container container border-container">
-                    <div class="title">
-                        <h2 class="sub-heading"><span>4Elementos</span> - Wordle Paranormal</h>
+                <div id="myUtil" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeUtils()">&times;</a>
+                    <!-- Utils content -->
+                    <div class="overlay-content border-container" style="width: 80%; margin: auto;">
+                        <h2 class="heading">Avisos</h2>
+                        <p>A lista de palavras e uma parte do código vieram do repositório oficial do <span>Letreco</span> que foram retirados para a criação dessa 
+                            versão temática do Letreco/Wordle! Lembrando que não lucramos de nenhuma forma com o site e tudo o que é visto aqui é feito para diversão dos fãs de <span>Ordem Paranormal</span>. 
+                            <br><br>Caso algo visto nesse site seja de sua autoria e você queira a retirada, basta enviar uma mensagem no nosso twitter que a retirada será feita o mais rápido possível.
+                            <hr>
+                            <h2 class="heading">Tutorial de Jogo</h2>
+                            Nossa versão segue as mesmas regras e dinâmicas de Letreco e Wordle, são elas: <br><br>
+                            Caso a letra apareça em <span>VERDE</span> significa que a letra está na palavra e na posição correta;<br>
+                            Caso a letra apareça em <span>AMARELO</span> significa que a letra está na palavra porém na posição errada;<br>
+                            Caso a letra apareça em <span>CINZA</span> significa que a letra não está na palavra;<br>
+                            Caso <span>TODAS AS LETRAS</span> façam a animação de 'flip' ao mesmo tempo significa que a palavra inteira é inválida.
+                        </p>
                     </div>
-                    
-                    <div style="margin: auto;">
-                        <div class="message-container" style="margin: auto;"></div>
-                        <div class="tile-container" style="margin: auto;"></div><br>
-                        <div class="key-container" style="margin: auto;"></div>
-                    </div>
+                </div>
+            
+                <div class="title">
+                    <h2 class="sub-heading">Wordle Paranormal - </h>
+                    <span onclick="openUtils()" style="font-size: 1.65rem; cursor: pointer;">❓</span>
+                </div>
+                
+                <div style="margin: auto;">
+                    <div class="message-container"></div>
+                    <div class="tile-container" style="margin: auto;"></div><br>
+                    <div class="key-container" style="margin: auto;"></div>
+                </div>
             </main>
             <!-- container main ends -->
 

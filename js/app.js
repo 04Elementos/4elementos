@@ -32,6 +32,14 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
+
+function openUtils() {
+  document.getElementById("myUtil").style.display = "block";
+}
+
+function closeUtils() {
+  document.getElementById("myUtil").style.display = "none";
+}
 //*** ------------------
 
 

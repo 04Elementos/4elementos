@@ -123,30 +123,34 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
-    flipTile()
 
-    if (currentTile === 5) {
-        if(wordle === guess) {
-            showMessage('Yay!')
-            isGameOver = true;
-            return;
-        } 
-        else {
-            if(currentRow >= 5) {
+    if(wordList.includes(guess)) {
+        flipTile()
+
+        if (currentTile === 5) {
+            if(wordle === guess) {
+                showMessage('Yay!')
                 isGameOver = true;
-                showMessage('nah')
-            }
-
-            if(currentRow < 5) {
-                currentRow++
-                currentTile = 0;
+                return;
+            } 
+            else {
+                if(currentRow >= 5) {
+                    isGameOver = true;
+                    showMessage('nah')
+                }
+    
+                if(currentRow < 5) {
+                    currentRow++
+                    currentTile = 0;
+                }
             }
         }
     }
 }
 
 const showMessage = (message) => {
-    const messageElement = document.createElement('p')
+    const messageElement = document.createElement('span')
+    messageElement.classList.add('centerP')
     messageElement.textContent = message;
     messageDisplay.append(messageElement)
 }
