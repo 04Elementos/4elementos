@@ -349,6 +349,10 @@ main.container.flex.container-pall {
     flex-wrap: wrap;
 }
 
+#word-not-found {
+    display: none;
+}
+
 .key-container button {
     width: 43px;
     height: 58px;

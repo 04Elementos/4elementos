@@ -4631,6 +4631,7 @@ wordList = [
     'DAMAR',
     'DAMAS',
     'DAMBA',
+    'DAMIR',
     'DAMBE',
     'DAMOS',
     'DAMPA',

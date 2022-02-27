@@ -87,17 +87,19 @@ keys.forEach(key => {
 });
 
 const handleClick = (key) => {
-    if (key === 'DEL') {
-        deleteLetter()
-        return
+    if(!isGameOver) {
+        if (key === 'DEL') {
+            deleteLetter()
+            return
+        }
+    
+        if (key === 'ENTER') {
+            checkRow()
+            return
+        }
+    
+        addLetter(key)
     }
-
-    if (key === 'ENTER') {
-        checkRow()
-        return
-    }
-
-    addLetter(key)
 }
 
 const addLetter = (letter) => {
@@ -123,20 +125,19 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
-
     if(wordList.includes(guess)) {
         flipTile()
+        document.getElementById('word-not-found').style.display = "none";
 
         if (currentTile === 5) {
             if(wordle === guess) {
-                showMessage('Yay!')
-                isGameOver = true;
+                showMessage('Yay! Você descobriu a palavra de hoje :)')
                 return;
             } 
             else {
                 if(currentRow >= 5) {
                     isGameOver = true;
-                    showMessage('nah')
+                    showMessage('Ops... parece que você não conseguiu descobrir a palavra de hoje. Boa sorte amanhã!')
                 }
     
                 if(currentRow < 5) {
@@ -145,6 +146,8 @@ const checkRow = () => {
                 }
             }
         }
+    } else {
+        document.getElementById('word-not-found').style.display = "block";
     }
 }
 
