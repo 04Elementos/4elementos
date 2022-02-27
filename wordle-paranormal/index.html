@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="4Elementos">
+        <meta name="twitter:site" content="https://04elementos.github.io/4elementos/">
+        <meta name="twitter:description" content="4Elementos é um site feito por fãs do universo de Ordem Paranormal para que outros fãs possam responder um questionário de 20 perguntas para saber qual elemento eles teriam afinidade baseado nas suas respostas.">
+        <meta name="twitter:image" content="https://04elementos.github.io/4elementos/images/elementos/Conhecimento.webp">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../images/elementos/Medo.webp" type="image/x-icon">
+        <title>4Elementos</title>
+
+        <!-- links css file -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
+
+        <!--  AOS Library  -->
+        <link rel="stylesheet" href="../styles/aos.css">
+    </head>
+
+    <body class="flex flex-column">
+        <div class="page">
+            <header class="header-page title flex flex-jc-sbt">
+                <h1 class="heading logo">4Elementos</h1>
+
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+                  <!-- Button to close the overlay navigation -->
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                  <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <a href="../index.html" onclick="closeNav()">Página Inicial</a>
+                        <a href="afinidade/index.html" onclick="closeNav()">Faça o teste de afinidade</a>
+                        <a href="wordle-paranormal/index.html" onclick="closeNav()">Jogue o Wordle Paranormal</a>
+                    </div>
+                </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+                <span onclick="openNav()" style="font-size: 1.65rem;">☰</span>
+            </header>
+
+            <!--  container main starts -->
+            <main class="game-container">
+                    <div class="title">
+                        <h2 class="sub-heading"><span>4Elementos</span> - Wordle Paranormal</h>
+                    </div>
+    
+                    <div class="message-container"></div>
+                    <div class="tile-container"></div>
+                    <div class="key-container"></div>
+            </main>
+            <!-- container main ends -->
+
+            <!-- footer page starts -->
+            <footer class="footer-page">
+                <div class="socials flex flex-row">
+                    <a href="https://github.com/04Elementos/4elementos">
+                        <img src="../images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
+                    </a>
+                    <a href="https://discord.gg/YD4a9FPxh9">
+                        <img src="../images/socials/discord.png" alt="Ícone do Discord" class="imgSocial">
+                    </a>
+                    <a href="https://twitter.com/Elementos04">
+                        <img src="../images/socials/twitter.png" alt="Ícone do Twitter" class="imgSocial">
+                    </a>
+                </div>
+            </footer>
+            <!-- footer page ends -->
+        </div>
+
+        <!------- AOS js Library  ---------->
+        <script type="application/javascript" src="../js/dailyword.js"></script>
+        <script type="application/javascript" src="../js/wordlist.js"></script>
+        <script type="application/javascript" src="../js/app.js"></script>
+        <script type="application/javascript" src="../js/wordle.js"></script>
+        <script type="application/javascript" src="../js/aos.js"></script>
+        <script>
+            // AOS Instance
+            AOS.init();
+        </script>
+    </body>
+</html>

@@ -325,6 +325,109 @@ main.container.flex.container-pall {
 }
 
 /*
+==================
+    *Wordle Paranormal*
+==================
+*/
+
+.game-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tile-container {
+    width: 330px;
+    margin-bottom: 30px;
+}
+
+.key-container {
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-container button {
+    width: 43px;
+    height: 58px;
+    border-radius: 4px;
+    margin: 4px 2px;
+    border: var(--border-white);
+    color: var(--white);
+    text-decoration: none;
+    background-color: transparent;
+    font-family: var(--Special-Elite);
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.key-container button:nth-child(11) {
+    margin-left: 30px;
+}
+
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+    width: 68px;
+}
+
+.tile-container div {
+    display: flex;
+}
+
+.tile-container .tile {
+    width: 62px;
+    height: 62px;
+    border-radius: 4px;
+    margin: 4px 2px;
+    border: var(--border-white);
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: var(--Special-Elite);
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*
+==================
+    *Wordle Paranormal - Cores*
+==================
+*/
+
+.tile.flip {
+    animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.green-overlay {
+    background-color: #11771c !important;
+}
+
+.yellow-overlay {
+    background-color: #a8993f !important;
+}
+
+.grey-overlay {
+    background-color: #2a2a2c !important;
+}
+
+/*
 --------------
   *Options*
 --------------
