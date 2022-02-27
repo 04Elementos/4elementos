@@ -339,7 +339,7 @@ main.container.flex.container-pall {
 }
 
 .tile-container {
-    width: 330px;
+    width: 380px;
     margin-bottom: 30px;
 }
 
@@ -424,7 +424,7 @@ main.container.flex.container-pall {
 }
 
 .grey-overlay {
-    background-color: #2a2a2c !important;
+    background-color: #2a2a2c;
 }
 
 /*
