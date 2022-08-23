@@ -117,6 +117,7 @@
                 if(localStorage.getItem("results") === "Medo") {
                     document.getElementById("agentName").innerHTML = `Criatura Desconhecida`
                 } else{
+                    const name = localStorage.getItem("name")
                     if(name) {
                         document.getElementById("agentName").innerHTML = `Agente ${name}`
                     } else {
